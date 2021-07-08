@@ -1,8 +1,5 @@
 Client_Server/.pytest_cache
 Client_Server/log/app
 Client_Server/log/app*
-help/help.py
-help/help_client.py
-help/help_server.py
 Client_Server/log/__pycache__/
 .idea/
