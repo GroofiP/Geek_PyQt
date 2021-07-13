@@ -4,6 +4,7 @@ import select
 from socket import socket, AF_INET, SOCK_STREAM
 from threading import Thread
 
+from Client_Server.service import log_send
 from log.server_log_config import logger
 
 
@@ -42,10 +43,7 @@ def ser_send_p(sock_cli, base_cli):
     sock_cli.send(pickle.dumps(str(f"Список клиентов: {base_cli}")))
     data = sock_cli.recv(1024)
     data_message = pickle.loads(data)
-    try:
-        logger.info(f'{data_message}')
-    except Exception as ex:
-        logger.info(f'Произошел сбой: {ex}')
+    log_send(data_message)
 
     if int(data_message[0].strip("#")) <= 100:
         base_cli[data_message[0]].send(pickle.dumps(data_message[1]))

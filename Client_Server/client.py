@@ -2,6 +2,8 @@ import argparse
 import multiprocessing
 import pickle
 from socket import socket, AF_INET, SOCK_STREAM
+
+from Client_Server.service import log_send
 from log.server_log_config import logger
 
 
@@ -32,14 +34,6 @@ def cli_start(sock):
     )
     sock.send(pickle.dumps(msg))
     return msg
-
-
-def log_send(data_mes):
-    "Запись в log"
-    try:
-        logger.info(f'{data_mes}')
-    except Exception as e:
-        logger.info(f'Произошел сбой: {e}')
 
 
 def cli_rec(sock):

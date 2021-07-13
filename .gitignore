@@ -6,5 +6,6 @@ Client_Server/.idea/
 Client_Server/__pycache__/
 Client_Server/log/__pycache__/
 Client_Server/log/app
+Client_Server/log/app*
 Client_Server/log/app.log
 
