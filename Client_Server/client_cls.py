@@ -30,6 +30,20 @@ class Client(metaclass=ClientVerifier):
         self.tcp = tcp
         self.sock = socket(AF_INET, SOCK_STREAM)
 
+    def auth_client(self):
+        auth = input(
+            'Введите, свой новый логин или используйте старый для входа в систему: '
+        )
+        self.sock.send(json.dumps(auth, ensure_ascii=False).encode("utf-8"))
+        data_message = json.loads(self.sock.recv(1024).decode("utf-8"))
+        if data_message is True:
+            info = input(
+                'Введите, информацию о себе: '
+            )
+            self.sock.send(json.dumps(info, ensure_ascii=False).encode("utf-8"))
+        else:
+            print(data_message)
+
     def cli_start(self):
         """Выбор сценария на сервере"""
         msg = input(
@@ -75,6 +89,7 @@ class Client(metaclass=ClientVerifier):
         """Запуск клиента"""
         with self.sock as s:
             s.connect((self.ip, self.tcp))
+            self.auth_client()
             while True:
                 self.cli_rec()
                 msg_1 = self.cli_start()
@@ -94,7 +109,7 @@ class Client(metaclass=ClientVerifier):
                     pass
 
 
-def start_client_parser():
+def start_client_parser(ip="127.0.0.1", tcp=7777):
     """Сценарий для терминала"""
     parser = argparse.ArgumentParser(description='Запуск клиента')
     parser.add_argument("a", type=str, help='Выбор ip', nargs='?')
@@ -104,7 +119,7 @@ def start_client_parser():
         a = Client(args.a, args.p)
         a.client_original()
     else:
-        a = Client("127.0.0.1", 7777)
+        a = Client(ip, tcp)
         a.client_original()
 
 
