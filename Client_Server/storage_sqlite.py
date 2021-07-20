@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, MetaData, Table, Integer, String, Column, text, ForeignKey
+from sqlalchemy import create_engine, MetaData, Table, Integer, String, Column, text, ForeignKey, UniqueConstraint
 from sqlalchemy.orm import mapper, sessionmaker, registry, relationship
 
 from service import log_send
@@ -35,10 +35,11 @@ class Storage:
                         Column("ip_date", String),
                         )
         contacts = Table("contacts", self.metadata,
-                     Column('id', Integer, primary_key=True, unique=True, autoincrement=True),
-                     Column("id_send", Integer),
-                     Column("id_recv", Integer, unique=True),
-                     )
+                         Column('id', Integer, primary_key=True, unique=True, autoincrement=True),
+                         Column("id_send", Integer),
+                         Column("id_recv", Integer),
+                         UniqueConstraint('id_send', 'id_recv', name='uix_1')
+                         )
         if self.table == "users":
             try:
                 mapper_registry.map_imperatively(User, user)
@@ -98,6 +99,13 @@ class Storage:
         result = self.engine.connect().execute(t)
         return result
 
+    def get_contacts(self):
+        t = text("SELECT * FROM contacts")
+        result = self.engine.connect().execute(t)
+        for a in result:
+            print(a)
+        return result
+
 
 class User:
     def __init__(self, login, information):
@@ -116,3 +124,9 @@ class Contacts:
     def __init__(self, id_send, id_recv):
         self.id_send = id_send
         self.id_recv = id_recv
+
+
+if __name__ in "__main__":
+    base_data = Storage(PATH, "contacts")
+    a = base_data.get_contacts()
+    print(a)

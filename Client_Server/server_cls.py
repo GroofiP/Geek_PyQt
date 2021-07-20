@@ -10,47 +10,47 @@ from storage_sqlite import Storage, PATH
 from service import log_send
 
 
-#
-# a) клиент:
-# * логин;
-# * информация.
-
 class PortVerifier:
-    def __init__(self, tcp):
-        self.tcp = tcp
-
-    def __setattr__(self, key, value):
+    def __set__(self, instance, value):
         if not isinstance(value, int):
             raise TypeError(f"Значение должно быть типа {int}")
-        super().__setattr__(key, value)
+        instance.__dict__[self.tcp] = value
+
+    def __set_name__(self, owner, name):
+        self.tcp = name
 
 
 class ServerVerifier(type):
 
-    def __init__(self, name_class, bases, dict_class):
+    def __init__(cls, name_class, bases, dict_class):
+        n = 0
         for key, value in dict_class.items():
-            a = dis.code_info(value)
-            if "connect" in a:
-                raise Exception("Такого метода как 'connect' не должно быть в классе")
-            elif key == "server_con":
-                if "SOCK_STREAM" not in a:
-                    raise Exception(
-                        "Такая функция у сокета,как 'SOCK_STREAM' должна быть в классе, так как соединение должно быть TCP")
-        type.__init__(self, name_class, bases, dict_class)
+            if key != "tcp":
+                a = dis.code_info(value)
+                if "connect" in a:
+                    raise Exception("Такого метода как 'connect' не должно быть в классе")
+                elif "SOCK_STREAM" in a:
+                    n = n + 1
+        if n == 0:
+            raise Exception(
+                "Такая функция у сокета,как 'SOCK_STREAM' должна быть в классе, так как соединение должно быть TCP")
+        type.__init__(cls, name_class, bases, dict_class)
 
 
 class Server(metaclass=ServerVerifier):
+    tcp = PortVerifier()
+
     def __init__(self, ip, tcp):
         self.ip = ip
-        self.tcp = PortVerifier(tcp).tcp
+        self.tcp = tcp
         self.sock = self.server_con()
+        self.base_group = {}
+        self.client_all = {}
 
-    def server_con(self):
-        """Развертывание сервера на определенном ip и tcp"""
-        sock = socket(AF_INET, SOCK_STREAM)
-        sock.bind((self.ip, self.tcp))
-        sock.listen(5)
-        return sock
+    @staticmethod
+    def forms_client(base_cli):
+        base_all_client = {f'#{z}': base_cli[z] for z in range(len(base_cli))}
+        return base_all_client
 
     @staticmethod
     def auth_server(sock_cli):
@@ -62,13 +62,13 @@ class Server(metaclass=ServerVerifier):
             log_send(ex)
             check_base = ""
         if auth not in check_base:
-            sock_cli.send(json.dumps(True, ensure_ascii=False).encode("utf-8"))
+            sock_cli.sendall(json.dumps(True, ensure_ascii=False).encode("utf-8"))
             info = json.loads(sock_cli.recv(1024).decode("utf-8"))
             base_data = Storage(PATH, "users", auth, info)
             base_data.add_base()
             base_data.metadata.clear()
         else:
-            sock_cli.send(json.dumps("Вы авторизованы", ensure_ascii=False).encode("utf-8"))
+            sock_cli.sendall(json.dumps("Вы авторизованы", ensure_ascii=False).encode("utf-8"))
         check_base = base_data.view_table_all()
         for id_auth in check_base:
             if id_auth[1] == auth:
@@ -85,114 +85,116 @@ class Server(metaclass=ServerVerifier):
         base_data.view_table_main("histories_users")
 
     @staticmethod
-    def ser_send_p(sock_cli, base_cli, func_base):
-        """Отправка сообщений пользователям"""
-        sock_cli.send(json.dumps(str(f"Список клиентов: {base_cli}"), ensure_ascii=False).encode("utf-8"))
-        data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
-        log_send(data_message)
-        try:
-            if int(data_message[0].strip("#")) <= 100:
-                sock_recv = base_cli[data_message[0]]
-                base_cli[data_message[0]].send(json.dumps(data_message[1], ensure_ascii=False).encode("utf-8"))
-                func_base(sock_cli, sock_recv)
-        except Exception as ex:
-            sock_cli.send(
-                json.dumps(f"Сообщение испорчено, попробуйте отослать ещё раз! ", ensure_ascii=False).encode("utf-8"))
-            log_send(ex)
-
-    @staticmethod
     def add_contacts(sock_cli_send, sock_cli_recv):
         send_cli_s = sock_cli_send.getpeername()
         send_cli_r = sock_cli_recv.getpeername()
+        print(type(send_cli_s), type(send_cli_r))
         base_data = Storage(PATH, "contacts")
         base_data.metadata.clear()
         result = base_data.view_table_main("histories_users")
         list_id_send = []
         list_id_recv = []
         for a in result:
-            print(type(a[3]),type(send_cli_s))
-            if str(a[3]) == str(send_cli_s):
+            if str(a[3]) == str(send_cli_s) and str(a[3]) == str(send_cli_r):
+                print(a[1])
+                list_id_send.append(a[1])
+                list_id_recv.append(a[1])
+            elif str(a[3]) == str(send_cli_s):
                 print(a[1])
                 list_id_send.append(a[1])
             elif str(a[3]) == str(send_cli_r):
                 print(a[1])
                 list_id_recv.append(a[1])
-        print(list_id_recv,list_id_send)
+        print(list_id_recv, list_id_send)
         base_data = Storage(PATH, "contacts", login=list_id_send[0], login_recv=list_id_recv[0])
         base_data.add_base()
         result = base_data.view_table_main("contacts")
         for a in result:
             print(a)
 
-    @staticmethod
-    def ser_send_g(sock_cli, base_gro):
+    def server_con(self):
+        """Развертывание сервера на определенном ip и tcp"""
+        sock = socket(AF_INET, SOCK_STREAM)
+        sock.bind((self.ip, self.tcp))
+        sock.listen(5)
+        return sock
+
+    def ser_send_p(self, sock_cli):
+        """Отправка сообщений пользователям"""
+        sock_cli.sendall(json.dumps(str(f"Список клиентов: {self.client_all}"), ensure_ascii=False).encode("utf-8"))
+        data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
+        log_send(data_message)
+        try:
+            if int(data_message[0].strip("#")) <= 100:
+                self.client_all[data_message[0]].sendall(
+                    json.dumps(data_message[1], ensure_ascii=False).encode("utf-8"))
+        except Exception as ex:
+            sock_cli.sendall(
+                json.dumps(f"Сообщение испорчено, попробуйте отослать ещё раз! ", ensure_ascii=False).encode("utf-8"))
+            log_send(ex)
+        self.add_contacts(sock_cli, self.client_all[data_message[0]])
+
+    def ser_send_g(self, sock_cli):
         """Отправка сообщений группе"""
-        sock_cli.send(json.dumps(str(f"Список групп: {base_gro}"), ensure_ascii=False).encode("utf-8"))
+        sock_cli.sendall(json.dumps(str(f"Список групп: {self.base_group}"), ensure_ascii=False).encode("utf-8"))
         data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
         if str(data_message[0].strip("#")).isdigit():
             if int(data_message[0].strip("#")) >= 100:
-                for sock_cl in base_gro[data_message[0]]:
-                    sock_cl.send(json.dumps(str(data_message[1]), ensure_ascii=False).encode("utf-8"))
+                for sock_cl in self.base_group[data_message[0]]:
+                    sock_cl.sendall(json.dumps(str(data_message[1]), ensure_ascii=False).encode("utf-8"))
             else:
-                sock_cli.send(json.dumps("Вы ввели цифру меньше 100", ensure_ascii=False).encode("utf-8"))
+                sock_cli.sendall(json.dumps("Вы ввели цифру меньше 100", ensure_ascii=False).encode("utf-8"))
         else:
-            sock_cli.send(
+            sock_cli.sendall(
                 json.dumps(f"Сообщение испорчено, попробуйте отослать ещё раз! ", ensure_ascii=False).encode("utf-8"))
 
-    @staticmethod
-    def ser_add_g(sock_cli, base_gro):
+    def ser_add_g(self, sock_cli):
         """Создание или добавление группы"""
-        sock_cli.send(json.dumps(str(f"Список групп: {base_gro}"), ensure_ascii=False).encode("utf-8"))
+        sock_cli.sendall(json.dumps(str(f"Список групп: {self.base_group}"), ensure_ascii=False).encode("utf-8"))
         data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
-        if data_message in base_gro:
-            for k, v in base_gro.items():
+        if data_message in self.base_group:
+            for k, v in self.base_group.items():
                 if k == data_message:
                     if sock_cli in v:
-                        sock_cli.send(
+                        sock_cli.sendall(
                             json.dumps("Вы уже создали или добавились в группу", ensure_ascii=False).encode("utf-8"))
                         break
                     elif sock_cli not in v:
                         v.append(sock_cli)
-                        base_gro.update({data_message: v})
-                        sock_cli.send(json.dumps("Вы успешно добавились в группу", ensure_ascii=False).encode("utf-8"))
+                        self.base_group.update({data_message: v})
+                        sock_cli.sendall(
+                            json.dumps("Вы успешно добавились в группу", ensure_ascii=False).encode("utf-8"))
                         break
         elif str(data_message.strip("#")).isdigit():
             if int(data_message.strip("#")) >= 100:
-                base_gro.update({data_message: [sock_cli]})
-                sock_cli.send(json.dumps("Вы успешно создали группу", ensure_ascii=False).encode("utf-8"))
+                self.base_group.update({data_message: [sock_cli]})
+                sock_cli.sendall(json.dumps("Вы успешно создали группу", ensure_ascii=False).encode("utf-8"))
             else:
-                sock_cli.send(json.dumps("Вы ввели цифру меньше 100", ensure_ascii=False).encode("utf-8"))
+                sock_cli.sendall(json.dumps("Вы ввели цифру меньше 100", ensure_ascii=False).encode("utf-8"))
         else:
-            sock_cli.send(json.dumps(f"Запрос на создание или удаление не удался, попробуйте ещё раз! ",
-                                     ensure_ascii=False).encode("utf-8"))
+            sock_cli.sendall(json.dumps(f"Запрос на создание или удаление не удался, попробуйте ещё раз! ",
+                                        ensure_ascii=False).encode("utf-8"))
 
-    @staticmethod
-    def ser_run(sock_cli, base_cli, base_gro, func_p, func_g, func_add, func_base):
+    def ser_run(self, sock_cli):
         """Запуск внутреннего сценария сервера"""
         while True:
-            base_all_client = {f'#{z}': base_cli[z] for z in range(len(base_cli))}
-            try:
-                data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
-            except Exception as ex:
-                log_send(ex)
-                break
+            data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
             if data_message == "П":
-                p_send_p = Thread(target=func_p, args=(sock_cli, base_all_client, func_base))
+                p_send_p = Thread(target=self.ser_send_p, args=(sock_cli,))
                 p_send_p.daemon = True
                 p_send_p.start()
             elif data_message == "Г":
-                p_send_g = Thread(target=func_g, args=(sock_cli, base_gro))
+                p_send_g = Thread(target=self.ser_send_g, args=(sock_cli,))
                 p_send_g.daemon = True
                 p_send_g.start()
             elif data_message == "ВГ":
-                p_add_g = Thread(target=func_add, args=(sock_cli, base_gro))
+                p_add_g = Thread(target=self.ser_add_g, args=(sock_cli,))
                 p_add_g.daemon = True
                 p_add_g.start()
 
     def server_original(self):
         """Запуск сервера"""
         clients = []
-        base_group = {}
 
         while True:
             try:
@@ -212,11 +214,11 @@ class Server(metaclass=ServerVerifier):
                 except Exception as err:
                     print(f"Клиент отключился{err}")
 
+                self.client_all.update(self.forms_client(w))
+
                 for s in w:
                     t_st = Thread(target=self.ser_run,
-                                  args=(
-                                      s, w, base_group, self.ser_send_p, self.ser_send_g, self.ser_add_g,
-                                      self.add_contacts))
+                                  args=(s,))
                     t_st.daemon = True
                     t_st.start()
 

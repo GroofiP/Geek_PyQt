@@ -8,8 +8,9 @@ from service import log_send
 
 
 class ClientVerifier(type):
-    def __init__(self, clsname, bases, clsdict):
-        for key, value in clsdict.items():
+    def __init__(cls, name_class, bases, dict_class):
+        n = 0
+        for key, value in dict_class.items():
             if isinstance(value, type(socket(AF_INET, SOCK_STREAM))):
                 raise Exception("Должно отсутствовать создание сокетов на уровне класса")
             a = dis.code_info(value)
@@ -17,11 +18,12 @@ class ClientVerifier(type):
                 raise Exception("Такой функции у сокета, как 'accept' не должна быть в классе")
             elif "listen" in a:
                 raise Exception("Такой функции у сокета,как 'listen' не должна быть в классе")
-            elif key == "__init__":
-                if "SOCK_STREAM" not in a:
-                    raise Exception(
-                        "Такая функция у сокета,как 'SOCK_STREAM' должна быть в классе, так как соединение должно быть TCP")
-        type.__init__(self, clsname, bases, clsdict)
+            elif "SOCK_STREAM" in a:
+                n = n + 1
+        if n == 0:
+            raise Exception(
+                "Такая функция у сокета,как 'SOCK_STREAM' должна быть в классе, так как соединение должно быть TCP")
+        type.__init__(cls, name_class, bases, dict_class)
 
 
 class Client(metaclass=ClientVerifier):
