@@ -8,7 +8,7 @@ def info_log(mod):
 
 
 def log_send(data_mes):
-    "Запись в log"
+    """Запись в log"""
     try:
         logger.info(f'{data_mes}')
     except Exception as e:
@@ -20,7 +20,7 @@ def main(func_ser_cli):
     func_ser_cli("127.0.0.1", 7777)
 
 
-def client_start_3(ip_go="", tcp_go="7777", n=3):
+def client_start_3(n=3):
     """
     Функция, для запуска множества клиентов на сервер
 

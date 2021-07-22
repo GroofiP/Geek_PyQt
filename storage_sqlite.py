@@ -11,7 +11,8 @@ DICT_TABLE = {
 
 
 class Storage:
-    def __init__(self, path, table, login=None, information=None, date=None, ip_date=None, login_recv=None):
+    def __init__(self, path, table, login=None, information=None, date=None, ip_date=None, login_recv=None,
+                 message=None, list_conta=None):
         self.engine = create_engine(path)
         self.login = login
         self.information = information
@@ -20,6 +21,8 @@ class Storage:
         self.table = table
         self.metadata = MetaData()
         self.login_recv = login_recv
+        self.message = message
+        self.list_conta = list_conta
 
     def con_base(self):
         mapper_registry = registry()
@@ -40,6 +43,17 @@ class Storage:
                          Column("id_recv", Integer),
                          UniqueConstraint('id_send', 'id_recv', name='uix_1')
                          )
+        history_message = Table("history_message", self.metadata,
+                                Column('id', Integer, primary_key=True, unique=True, autoincrement=True),
+                                Column("id_send", Integer),
+                                Column("message", String),
+                                )
+        list_contacts = Table("list_contacts", self.metadata,
+                              Column('id', Integer, primary_key=True, unique=True, autoincrement=True),
+                              Column("id_send", Integer),
+                              Column("list_con", String),
+                              )
+
         if self.table == "users":
             try:
                 mapper_registry.map_imperatively(User, user)
@@ -61,6 +75,21 @@ class Storage:
                 mapper(Contacts, contacts)
             except Exception as ex:
                 log_send(ex)
+        elif self.table == "history_message":
+            try:
+                mapper(History_Message, history_message)
+            except Exception as ex:
+                log_send(ex)
+        elif self.table == "list_contacts":
+            try:
+                mapper(List_Contact, list_contacts)
+            except Exception as ex:
+                log_send(ex)
+
+    def main_session(self):
+        self.metadata.create_all(self.engine)
+        session_cls = sessionmaker(bind=self.engine)
+        return session_cls()
 
     def add_base(self):
         if self.table == "users":
@@ -72,6 +101,14 @@ class Storage:
         elif self.table == "contacts":
             self.con_base()
             base_a = Contacts(id_send=self.login, id_recv=self.login_recv)
+        elif self.table == "history_message":
+            self.con_base()
+            base_a = History_Message(id_send=self.login, message=self.message)
+        elif self.table == "list_contacts":
+            self.con_base()
+            l_s = str(self.list_conta)
+            print(type(l_s))
+            base_a = List_Contact(id_send=self.login, list_con=l_s)
         else:
             base_a = ""
         self.metadata.create_all(self.engine)
@@ -99,11 +136,9 @@ class Storage:
         result = self.engine.connect().execute(t)
         return result
 
-    def get_contacts(self):
-        t = text("SELECT * FROM contacts")
+    def get_contacts(self, text_sel):
+        t = text(text_sel)
         result = self.engine.connect().execute(t)
-        for a in result:
-            print(a)
         return result
 
 
@@ -126,7 +161,17 @@ class Contacts:
         self.id_recv = id_recv
 
 
+class History_Message:
+    def __init__(self, id_send, message):
+        self.id_send = id_send
+        self.message = message
+
+
+class List_Contact:
+    def __init__(self, id_send, list_con):
+        self.id_send = id_send
+        self.list_con = list_con
+
+
 if __name__ in "__main__":
-    base_data = Storage(PATH, "contacts")
-    a = base_data.get_contacts()
-    print(a)
+    pass
