@@ -2,9 +2,11 @@ import argparse
 import dis
 import json
 import select
+
 from datetime import datetime
 from socket import socket, AF_INET, SOCK_STREAM
 from threading import Thread
+
 
 from storage_sqlite import Storage, PATH
 from service import log_send
@@ -46,10 +48,13 @@ class Server(metaclass=ServerVerifier):
         self.sock = self.server_con()
         self.base_group = {}
         self.client_all = {}
+        self.id_user = {}
 
-    @staticmethod
-    def forms_client(base_cli):
-        base_all_client = {f'#{z}': base_cli[z] for z in range(len(base_cli))}
+    def forms_client(self, base_cli):
+        list_v = []
+        for v in self.id_user.values():
+            list_v.append(v)
+        base_all_client = {list_v[-1]: base_cli[-1]}
         return base_all_client
 
     @staticmethod
@@ -72,13 +77,15 @@ class Server(metaclass=ServerVerifier):
         check_base = base_data.view_table_all()
         for id_auth in check_base:
             if id_auth[1] == auth:
-                return id_auth[0]
+                return {id_auth[0]: id_auth[1]}
 
-    @staticmethod
-    def history_client(sock_cli, id_auth):
+    def history_client(self, sock_cli):
         time = datetime.today().strftime("%Y.%m.%d %H:%M:%S")
         ip_date = sock_cli.getpeername()
-        base_data = Storage(PATH, "histories_users", login=id_auth, date=time, ip_date=ip_date)
+        list_k = []
+        for k in self.id_user.keys():
+            list_k.append(k)
+        base_data = Storage(PATH, "histories_users", login=list_k[-1], date=time, ip_date=ip_date)
         base_data.metadata.clear()
         base_data.add_base()
         base_data.view_table_all()
@@ -88,7 +95,6 @@ class Server(metaclass=ServerVerifier):
     def add_contacts(sock_cli_send, sock_cli_recv):
         send_cli_s = sock_cli_send.getpeername()
         send_cli_r = sock_cli_recv.getpeername()
-        print(type(send_cli_s), type(send_cli_r))
         base_data = Storage(PATH, "contacts")
         base_data.metadata.clear()
         result = base_data.view_table_main("histories_users")
@@ -112,6 +118,23 @@ class Server(metaclass=ServerVerifier):
         for a in result:
             print(a)
 
+    def contacts(self, sock_cli):
+        list_k = []
+        for k, v in self.client_all.items():
+            if v == sock_cli:
+                list_k.append(k)
+        for y, e in self.id_user.items():
+            if e == list_k[0]:
+                list_k.append(y)
+        base_data = Storage(PATH, "contacts")
+        id_contacts = base_data.get_contacts(f"SELECT id_send, id_recv FROM contacts where id_send == {list_k[1]}")
+        name = {}
+        for k, v in id_contacts:
+            name_contacts = base_data.get_contacts(f"SELECT id, login FROM users where id == {v}")
+            for y, e in name_contacts:
+                name.update({y: e})
+        return name
+
     def server_con(self):
         """Развертывание сервера на определенном ip и tcp"""
         sock = socket(AF_INET, SOCK_STREAM)
@@ -123,11 +146,14 @@ class Server(metaclass=ServerVerifier):
         """Отправка сообщений пользователям"""
         sock_cli.sendall(json.dumps(str(f"Список клиентов: {self.client_all}"), ensure_ascii=False).encode("utf-8"))
         data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
-        log_send(data_message)
+        dict_message = {}
+        for k, v in self.client_all.items():
+            if sock_cli == v:
+                dict_message = {k: data_message[1]}
+        print(self.client_all[data_message[0]])
         try:
-            if int(data_message[0].strip("#")) <= 100:
-                self.client_all[data_message[0]].sendall(
-                    json.dumps(data_message[1], ensure_ascii=False).encode("utf-8"))
+            self.client_all[data_message[0]].sendall(
+                json.dumps(dict_message, ensure_ascii=False).encode("utf-8"))
         except Exception as ex:
             sock_cli.sendall(
                 json.dumps(f"Сообщение испорчено, попробуйте отослать ещё раз! ", ensure_ascii=False).encode("utf-8"))
@@ -180,17 +206,14 @@ class Server(metaclass=ServerVerifier):
         while True:
             data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
             if data_message == "П":
-                p_send_p = Thread(target=self.ser_send_p, args=(sock_cli,))
-                p_send_p.daemon = True
-                p_send_p.start()
+                self.ser_send_p(sock_cli)
             elif data_message == "Г":
-                p_send_g = Thread(target=self.ser_send_g, args=(sock_cli,))
-                p_send_g.daemon = True
-                p_send_g.start()
+                self.ser_send_g(sock_cli)
             elif data_message == "ВГ":
-                p_add_g = Thread(target=self.ser_add_g, args=(sock_cli,))
-                p_add_g.daemon = True
-                p_add_g.start()
+                self.ser_add_g(sock_cli)
+            elif data_message == "К":
+                dict_contacts = self.contacts(sock_cli)
+                sock_cli.sendall(json.dumps(dict_contacts, ensure_ascii=False).encode("utf-8"))
 
     def server_original(self):
         """Запуск сервера"""
@@ -202,8 +225,9 @@ class Server(metaclass=ServerVerifier):
             except OSError:
                 print("Help")
             else:
-                id_auth = self.auth_server(cli)
-                self.history_client(cli, id_auth)
+                self.id_user.update(self.auth_server(cli))
+                print(self.id_user)
+                self.history_client(cli)
                 print(f"Получен запрос на соединение от {adr}")
                 clients.append(cli)
             finally:
@@ -217,8 +241,7 @@ class Server(metaclass=ServerVerifier):
                 self.client_all.update(self.forms_client(w))
 
                 for s in w:
-                    t_st = Thread(target=self.ser_run,
-                                  args=(s,))
+                    t_st = Thread(target=self.ser_run, args=(s,))
                     t_st.daemon = True
                     t_st.start()
 
