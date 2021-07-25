@@ -1,0 +1,99 @@
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 41420)>}
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 41420)>}
+timed out
+Список клиентов: {'Milk': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 41452)>}
+{'Milk': 'Привет'}
+timed out
+Class '<class '__main__.User'>' already has a primary mapper defined. 
+Class '<class '__main__.User'>' already has a primary mapper defined. 
+Class '<class '__main__.User'>' already has a primary mapper defined. 
+Class '<class '__main__.User'>' already has a primary mapper defined. 
+Class '<class '__main__.User'>' already has a primary mapper defined. 
+Class '<class '__main__.User'>' already has a primary mapper defined. 
+Class '<class '__main__.User'>' already has a primary mapper defined. 
+Class '<class '__main__.User'>' already has a primary mapper defined. 
+Class '<class '__main__.User'>' already has a primary mapper defined. 
+Class '<class '__main__.User'>' already has a primary mapper defined. 
+Class '<class '__main__.User'>' already has a primary mapper defined. 
+Class '<class '__main__.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Groofi1': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8005), raddr=('127.0.0.1', 32940)>}
+{'Groofi1': 'Привет'}
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Groofi1': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8005), raddr=('127.0.0.1', 32956)>}
+{'Groofi1': 'ривет'}
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Groofi1': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8005), raddr=('127.0.0.1', 32960)>}
+{'Groofi1': 'Привет'}
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8005), raddr=('127.0.0.1', 32978)>, 'Groofi1': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8005), raddr=('127.0.0.1', 32980)>}
+timed out
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Groofi1': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8006), raddr=('127.0.0.1', 39894)>}
+{'Groofi1': 'Привт'}
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {1: <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8006), raddr=('127.0.0.1', 40332)>, 5: <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8006), raddr=('127.0.0.1', 40334)>}
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'Milk': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8006), raddr=('127.0.0.1', 40336)>, 'Groofi1': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8006), raddr=('127.0.0.1', 40338)>}
+{'Milk': 'Привет'}
+timed out
+Список клиентов: {'Milk': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8006), raddr=('127.0.0.1', 40336)>, 'Groofi1': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8006), raddr=('127.0.0.1', 40338)>}
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+{'Groofi1': 'Привет'}
+timed out

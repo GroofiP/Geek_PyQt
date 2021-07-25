@@ -1,0 +1,1435 @@
+['#0', 'Привет']
+list index out of range
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34068)>}
+timed out
+timed out
+
+string index out of range
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34068)>}
+['Groofi', '']
+invalid literal for int() with base 10: 'Groofi'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34068)>}
+['#0', 'Привет']
+Привет
+timed out
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34072)>}
+['#0', 'Привет']
+Привет
+timed out
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34076)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34078)>}
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34076)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34078)>}
+['#0', 'Привет']
+(sqlite3.IntegrityError) UNIQUE constraint failed: contacts.id_recv
+[SQL: INSERT INTO contacts (id_send, id_recv) VALUES (?, ?)]
+[parameters: (2, 1)]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+timed out
+timed out
+Привет
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34076)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34078)>, '#2': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34408)>}
+['#0', 'Привет']
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+(sqlite3.IntegrityError) UNIQUE constraint failed: contacts.id_recv
+[SQL: INSERT INTO contacts (id_send, id_recv) VALUES (?, ?)]
+[parameters: (4, 1)]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+timed out
+timed out
+
+Привет
+string index out of range
+string index out of range
+[Errno 104] Connection reset by peer
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35590)>}
+['#-', '']
+invalid literal for int() with base 10: '-'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+'#-'
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35590)>}
+['#0', 'Привет']
+Привет
+list index out of range
+timed out
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+[Errno 107] Transport endpoint is not connected
+timed out
+timed out
+timed out
+timed out
+[Errno 107] Transport endpoint is not connected
+timed out
+Список групп: {}
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+Список групп: {}
+Вы успешно создали группу
+timed out
+Список групп: {'#100': [<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35598)>]}
+Привет
+timed out
+Список групп: {'#100': [<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35598)>]}
+timed out
+timed out
+timed out
+timed out
+Запрос на создание или удаление не удался, попробуйте ещё раз! 
+Список групп: {'#100': [<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35598)>]}
+Вы успешно создали группу
+timed out
+Список групп: {'#100': [<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35598)>], '#101': [<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35598)>]}
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+timed out
+Expecting value: line 1 column 1 (char 0)
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+Expecting value: line 1 column 1 (char 0)
+timed out
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35708)>}
+['#0', 'Привет']
+Привет
+list index out of range
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35708)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35786)>}
+timed out
+timed out
+timed out
+timed out
+timed out
+П
+invalid literal for int() with base 10: 'П'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+'П'
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35708)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35786)>}
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35708)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35786)>}
+['#1', 'Привет']
+(sqlite3.IntegrityError) UNIQUE constraint failed: contacts.id_recv
+[SQL: INSERT INTO contacts (id_send, id_recv) VALUES (?, ?)]
+[parameters: (1, 2)]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+timed out
+timed out
+Привет
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+timed out
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50004)>}
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50004)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50008)>}
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+Expecting value: line 1 column 1 (char 0)
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35892)>}
+['#0', 'Привет']
+Привет
+list index out of range
+timed out
+Список групп: {}
+timed out
+timed out
+Запрос на создание или удаление не удался, попробуйте ещё раз! 
+Список групп: {}
+Вы успешно создали группу
+timed out
+Список групп: {'#100': [<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35892)>]}
+Привет
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 36318)>}
+['#0', 'Привет']
+Привет
+list index out of range
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 36324)>}
+timed out
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 36324)>}
+['#0', 'Привет']
+Привет
+list index out of range
+timed out
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50536)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50538)>}
+['#1', 'Привет']
+Привет
+list index out of range
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50536)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50538)>}
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+П
+invalid literal for int() with base 10: 'П'
+'П'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50536)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50538)>}
+['#0', 'Привет']
+(sqlite3.IntegrityError) UNIQUE constraint failed: contacts.id_recv
+[SQL: INSERT INTO contacts (id_send, id_recv) VALUES (?, ?)]
+[parameters: (5, 1)]
+(Background on this error at: http://sqlalche.me/e/14/gkpj)
+timed out
+timed out
+Привет
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 36428)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 36430)>}
+['#0', 'Привет']
+(sqlite3.InterfaceError) Error binding parameter 0 - probably unsupported type.
+[SQL: INSERT INTO contacts (id_send, id_recv) VALUES (?, ?)]
+[parameters: ([5], [1])]
+(Background on this error at: http://sqlalche.me/e/14/rvf5)
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+Привет
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50634)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50638)>}
+timed out
+timed out
+timed out
+timed out
+П
+invalid literal for int() with base 10: 'П'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+'П'
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50634)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50638)>}
+timed out
+timed out
+timed out
+timed out
+
+string index out of range
+string index out of range
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50634)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50638)>}
+timed out
+['#0', 'Привет']
+Привет
+list index out of range
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50634)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50638)>}
+timed out
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50634)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 50638)>}
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38446)>}
+['#0', 'Привет']
+Привет
+list index out of range
+timed out
+timed out
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38548)>}
+['#0', 'Ghbdtn']
+Ghbdtn
+list index out of range
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38580)>}
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38592)>}
+['#0', 'ПРивет']
+ПРивет
+list index out of range
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38592)>, '#1': <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38604)>}
+timed out
+timed out
+П
+Сообщение испорчено, попробуйте отослать ещё раз! 
+invalid literal for int() with base 10: 'П'
+'П'
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38592)>, '#1': <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38604)>}
+timed out
+
+Сообщение испорчено, попробуйте отослать ещё раз! 
+string index out of range
+string index out of range
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38746)>}
+timed out
+timed out
+timed out
+
+string index out of range
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38746)>}
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38754)>}
+['#0', 'Привет']
+Привет
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38760)>}
+['#0', 'Привет']
+Привет
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38768)>}
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38768)>}
+['#0', 'Привет']
+Привет
+timed out
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39516)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39518)>}
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39516)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39518)>}
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+
+string index out of range
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+П
+invalid literal for int() with base 10: 'П'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39516)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39518)>}
+['#0', 'Привет']
+timed out
+timed out
+(sqlite3.OperationalError) no such table: users
+[SQL: SELECT * FROM users]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 53730)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 53732)>}
+['#)', '']
+invalid literal for int() with base 10: ')'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 53730)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 53732)>}
+['#0', 'Привет']
+timed out
+timed out
+timed out
+Привет
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 53730)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 53732)>}
+['#0', 'Привет']
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+Привет
+(sqlite3.OperationalError) no such table: users
+[SQL: SELECT * FROM users]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39834)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39836)>}
+['#0', 'Привет']
+timed out
+timed out
+Привет
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39834)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39836)>}
+['#0', 'Привет']
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+(sqlite3.OperationalError) no such table: users
+[SQL: SELECT * FROM users]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 54054)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 54056)>}
+timed out
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 54054)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 54056)>}
+timed out
+timed out
+timed out
+timed out
+П
+invalid literal for int() with base 10: 'П'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+['#0', 'Привет']
+timed out
+Привет
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 54054)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 54056)>}
+['#0', 'Привет']
+Привет
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 54054)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8080), raddr=('127.0.0.1', 54056)>}
+timed out
+timed out
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 42164)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 42168)>}
+['#0', 'Привет']
+timed out
+timed out
+Привет
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 42164)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 42168)>}
+['#0', 'Привет']
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+Привет
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 42164)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 42168)>}
+['#0', 'Привет']
+Привет
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 42164)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 42168)>}
+timed out
+timed out
+timed out
+timed out
+timed out
+
+string index out of range
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 42164)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 42168)>}
+timed out
+timed out
+
+string index out of range
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 42164)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 42168)>}
+['#1', 'Привет']
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+Привет
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40440)>}
+['', '']
+invalid literal for int() with base 10: ''
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+timed out
+timed out
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 41234)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 41274)>, '#2': <socket.socket fd=9, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 41314)>, '#3': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 41316)>}
+['', '']
+invalid literal for int() with base 10: ''
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 43530)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 43532)>}
+timed out
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 43530)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 43532)>}
+timed out
+timed out
+timed out
+timed out
+П
+invalid literal for int() with base 10: 'П'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+['#1', 'Привет']
+timed out
+timed out
+timed out
+Привет
+timed out
+timed out
+timed out
+timed out
+timed out
+{'1': 'Groofi', '2': 'Groofido', '6': 'Rick'}
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 41904)>}
+timed out
+timed out
+
+string index out of range
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 41904)>}
+['#0', 'Привет']
+keys must be str, int, float, bool or None, not socket
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 41904)>}
+['#0', 'Привет']
+keys must be str, int, float, bool or None, not socket
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 41904)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 41906)>}
+['#0', 'Привет']
+keys must be str, int, float, bool or None, not socket
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 44112)>}
+['#0', 'Привет']
+keys must be str, int, float, bool or None, not socket
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 44112)>}
+['#-', '']
+invalid literal for int() with base 10: '-'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 44112)>}
+['#0', 'Привет']
+keys must be str, int, float, bool or None, not socket
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 44112)>}
+['#0', 'Прив']
+keys must be str, int, float, bool or None, not socket
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 44112)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 44198)>}
+['#0', 'Привет']
+keys must be str, int, float, bool or None, not socket
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 44204)>}
+timed out
+timed out
+
+string index out of range
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 44204)>}
+['#0', 'Привет']
+Object of type socket is not JSON serializable
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 41474)>}
+['#-', '']
+invalid literal for int() with base 10: '-'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 41474)>}
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 41474)>}
+['#0', 'Привет']
+Привет
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 41476)>}
+['#0', 'Привет']
+{"<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 41476)>": 'Привет'}
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 41480)>}
+timed out
+timed out
+П
+invalid literal for int() with base 10: 'П'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 41480)>}
+['#0', 'Привет']
+{"('127.0.0.1', 41480)": 'Привет'}
+timed out
+timed out
+timed out
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38260)>}
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38336)>}
+timed out
+timed out
+
+string index out of range
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38336)>}
+['#0', 'Привет']
+{"('127.0.0.1', 38336)": 'Привет'}
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38346)>}
+['#0', 'Привет']
+{"('127.0.0.1', 38346)": 'Привет'}
+timed out
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38356)>}
+['#0', 'Привет']
+{"('127.0.0.1', 38356)": 'Привет'}
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38360)>}
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38360)>}
+['#0', 'Привет']
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38398)>}
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 38566)>}
+['#0', 'Привет']
+{"('127.0.0.1', 38566)": 'Привет'}
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39128)>}
+['#0', 'Привет']
+{"('127.0.0.1', 39128)": 'Привет'}
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39128)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39130)>}
+['#0', 'Привет']
+timed out
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39180)>}
+['#0', 'Привет']
+{"('127.0.0.1', 39180)": 'Привет'}
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39184)>}
+['#0', 'Привет']
+{"('127.0.0.1', 39184)": 'Привет'}
+(sqlite3.OperationalError) no such table: users
+[SQL: SELECT * FROM users]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39186)>}
+timed out
+timed out
+П
+invalid literal for int() with base 10: 'П'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39186)>}
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39346)>}
+['#0', 'Привет']
+{"('127.0.0.1', 39346)": 'Привет'}
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39350)>}
+['#0', 'Привет']
+{"('127.0.0.1', 39350)": 'Привет'}
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39352)>}
+['#0', 'Привет']
+{"('127.0.0.1', 39352)": 'Привет'}
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39356)>}
+timed out
+(sqlite3.OperationalError) no such table: users
+[SQL: SELECT * FROM users]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39360)>}
+['#0', 'Привет']
+{"('127.0.0.1', 39360)": 'Привет'}
+timed out
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39360)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39364)>}
+['#0', 'Привет']
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39364)>}
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39364)>}
+['#0', 'Привет']
+[Errno 107] Transport endpoint is not connected
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+П
+invalid literal for int() with base 10: 'П'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39364)>, '#2': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39412)>, '#3': <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39414)>}
+['#1', 'Привет']
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+{"('127.0.0.1', 39364)": 'Привет'}
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56520)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56522)>}
+['#1', 'Привет']
+timed out
+timed out
+{"('127.0.0.1', 56522)": 'Привет'}
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56520)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56522)>}
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56520)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56522)>}
+['#1', 'Привет']
+{"('127.0.0.1', 56522)": 'Привет'}
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56584)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56586)>}
+['№1', '']
+invalid literal for int() with base 10: '№1'
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56584)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56586)>}
+['#0', 'Привет']
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+{"('127.0.0.1', 56584)": 'Привет'}
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56584)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56586)>}
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+timed out
+
+string index out of range
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56584)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56586)>}
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+timed out
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56584)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8081), raddr=('127.0.0.1', 56586)>}
+['#1', 'Привет']
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+{"('127.0.0.1', 56586)": 'Привет'}
+timed out
+timed out
+{'1': 'Groofi', '3': 'Milk'}
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39736)>}
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+{}
+timed out
+timed out
+timed out
+timed out
+(sqlite3.OperationalError) no such table: users
+[SQL: SELECT * FROM users]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+{}
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+{}
+timed out
+timed out
+{}
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39870)>}
+['прпроп', '']
+invalid literal for int() with base 10: 'прпроп'
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+Сообщение испорчено, попробуйте отослать ещё раз! 
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39880)>}
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+{}
+timed out
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39892)>}
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+{}
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39892)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39934)>}
+['#0', 'Привеб\\']
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+{"('127.0.0.1', 39892)": 'Привеб\\'}
+timed out
+{'1': 'Groofi'}
+timed out
+timed out
+timed out
+(sqlite3.OperationalError) no such table: users
+[SQL: SELECT * FROM users]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+{}
+timed out
+timed out
+{}
+timed out
+timed out
+{}
+timed out
+timed out
+{}
+timed out
+timed out
+{}
+(sqlite3.OperationalError) no such table: users
+[SQL: SELECT * FROM users]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+{}
+timed out
+timed out
+{}
+timed out
+timed out
+{}
+timed out
+timed out
+{}
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+{}
+timed out
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46600)>, '#1': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46604)>}
+['#0', 'Привет']
+timed out
+timed out
+{"('127.0.0.1', 46600)": 'Привет'}
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53792)>}
+['Groofi', 'Привет']
+invalid literal for int() with base 10: 'Groofi'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53792)>}
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+
+string index out of range
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46736)>}
+['Groofi', 'Привет']
+invalid literal for int() with base 10: 'Groofi'
+Сообщение испорчено, попробуйте отослать ещё раз! 
+timed out
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46740)>}
+['Groofi', 'Привет']
+{"('127.0.0.1', 46740)": 'Привет'}
+timed out
+timed out
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Groodp': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46744)>}
+['Groodp', 'Привет']
+{"('127.0.0.1', 46744)": 'Привет'}
+timed out
+timed out
+timed out
+Список клиентов: {'Groodp': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46744)>}
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Groodp': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46748)>}
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+Список клиентов: {'Groodp': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53886)>, 'Groofi': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53888)>, 'Milk': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53892)>}
+timed out
+timed out
+Список клиентов: {'Groodp': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53886)>, 'Groofi': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53888)>, 'Milk': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53892)>}
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+['Milk', 'Привет']
+timed out
+timed out
+{"('127.0.0.1', 53892)": 'Привет'}
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53994)>, 'Milk': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53996)>}
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53994)>, 'Milk': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53996)>}
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+{'Groofi': 'Привет'}
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53994)>, 'Milk': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53996)>}
+{'Milk': 'Привет'}
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53994)>, 'Milk': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 53996)>}
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+{'Milk': 'Приветъ'}
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 47046)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 47048)>}
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 47046)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 47048)>}
+timed out
+timed out
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 47046)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 47048)>}
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+timed out
+{'Groofi': 'Привет'}
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+{'Qwe': 'Привет'}
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 47046)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 47048)>}
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 47046)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 47048)>}
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+{'Groofi': 'Привет'}
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 54202)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 54204)>}
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 54202)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 54204)>}
+timed out
+timed out
+{'Qwe': 'Привет'}
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+{'Groofi': 'Привет'}
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 54234)>, 'Helio': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 54236)>, 'Qwe': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 54238)>}
+{'Helio': 'Привет'}
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 54234)>, 'Helio': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 54236)>, 'Qwe': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 54238)>}
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+{'Helio': 'Привет, как твои дела? '}
+timed out
+timed out
+timed out
+timed out
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список групп: {}
+Вы успешно создали группу
+timed out
+Список групп: {'#100': [<socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 55108)>]}
+Привет
+timed out
+timed out
+timed out
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+{'2': 'Groofi'}
+timed out
+{'2': 'Groofi'}
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 55110)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8082), raddr=('127.0.0.1', 55112)>}
+timed out
+timed out
+{'Groofi': 'Привет'}
+{'2': 'Groofi'}
+Class '<class 'storage_sqlite.List_Contact'>' already has a primary mapper defined. 
+timed out
+{'2': 'Groofi'}
+Class '<class 'storage_sqlite.List_Contact'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+{'2': 5}
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+{}
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+{'2': 'Groofi', '4': 'Qwe', '5': 'Milk'}
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 48432)>, 'Groofido': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 48434)>}
+timed out
+timed out
+{'Groofi': 'Привет'}
+{'2': 'Groofi', '4': 'Qwe', '5': 'Milk', '8': 'Groofido'}
+Class '<class 'storage_sqlite.List_Contact'>' already has a primary mapper defined. 
+timed out
+timed out
+{'2': 'Groofi', '4': 'Qwe', '5': 'Milk', '8': 'Groofido'}
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+timed out
+{'2': 'Groofi', '4': 'Qwe', '5': 'Milk', '8': 'Groofido'}
+timed out
+{'2': 'Groofi', '4': 'Qwe', '5': 'Milk', '8': 'Groofido'}
+timed out
+timed out
+{'2': 'Groofi', '4': 'Qwe', '5': 'Milk', '8': 'Groofido'}
+timed out
+timed out
+{'2': 'Groofi', '4': 'Qwe', '5': 'Milk', '8': 'Groofido'}
+timed out
+timed out
+{'2': 'Groofi', '4': 'Qwe', '5': 'Milk', '8': 'Groofido'}
+timed out
+timed out
+{'2': 'Groofi', '4': 'Qwe', '5': 'Milk', '8': 'Groofido'}
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+{'2': 'Groofi', '4': 'Qwe', '5': 'Milk', '8': 'Groofido'}
+timed out
+(sqlite3.OperationalError) no such table: users
+[SQL: SELECT * FROM users]
+(Background on this error at: http://sqlalche.me/e/14/e3q8)
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+timed out
+{}
+timed out
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+{}
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8083), raddr=('127.0.0.1', 35146)>, 'Groofido': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8083), raddr=('127.0.0.1', 35150)>}
+timed out
+timed out
+{'Groofido': 'Привет'}
+{'1': 'Groofi'}
+Class '<class 'storage_sqlite.List_Contact'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39628)>}
+{'Groofi': 'Привет'}
+timed out
+timed out
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8000), raddr=('127.0.0.1', 42498)>}
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42146)>}
+{'Groofi': 'Приветэ'}
+timed out
+Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42146)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42152)>, 'Йцу': <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42154)>}
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+{'Groofi': 'Приветики'}
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42146)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42152)>, 'Йцу': <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42154)>, 'Ьшдл': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42156)>, 'Milk': <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42158)>}
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42146)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42152)>, 'Йцу': <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42154)>, 'Ьшдл': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42156)>, 'Milk': <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42158)>}
+timed out
+timed out
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42146)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42152)>, 'Йцу': <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42154)>, 'Ьшдл': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42156)>, 'Milk': <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42158)>}
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+timed out
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42146)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42152)>, 'Йцу': <socket.socket fd=10, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42154)>, 'Ьшдл': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42156)>, 'Milk': <socket.socket fd=11, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42158)>}
+Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+{'Groofi': 'Привет'}
+timed out
+Список клиентов: {'Йцу': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42222)>}
+{'Йцу': 'Привет'}
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Йцу': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42222)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42224)>}
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+{'Qwe': 'Я настоящий Qwe'}
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Йцу': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42222)>, 'Qwe': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42224)>, 'Ьшдл': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42230)>}
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out
+timed out
+Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+timed out
+Список клиентов: {'Ьшдл': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42236)>, 'Йцу': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42238)>}
+timed out
+timed out
+{'Йцу': 'Привет'}
+Список клиентов: {'Ьшдл': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42236)>, 'Йцу': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42238)>}
+Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+timed out
+timed out

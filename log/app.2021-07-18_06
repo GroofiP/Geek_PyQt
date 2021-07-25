@@ -1,0 +1,4 @@
+timed out
+Список клиентов: {'#0': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 60944)>}
+Привет
+Сообщение испорчено, попробуйте отослать ещё раз! 
