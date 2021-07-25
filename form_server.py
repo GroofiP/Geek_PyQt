@@ -55,14 +55,11 @@ class Ui_MainWindow(object):
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.horizontalLayout_2.addWidget(self.lineEdit_3)
         self.gridLayout.addLayout(self.horizontalLayout_2, 0, 0, 1, 1)
-
         self.horizontalLayout.setObjectName("horizontalLayout")
-
         self.label.setStyleSheet("border: 4px double black;")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.horizontalLayout.addWidget(self.label)
-
         self.lineEdit.setMaximumSize(QtCore.QSize(150, 16777215))
         self.lineEdit.setAutoFillBackground(False)
         self.lineEdit.setStyleSheet("background-color: white")
@@ -70,27 +67,19 @@ class Ui_MainWindow(object):
         self.lineEdit.setObjectName("lineEdit")
         self.horizontalLayout.addWidget(self.lineEdit)
         self.gridLayout.addLayout(self.horizontalLayout, 0, 1, 1, 1)
-
         self.verticalLayout_5.setObjectName("verticalLayout_5")
-
         self.pushButton_4.setObjectName("pushButton_4")
         self.verticalLayout_5.addWidget(self.pushButton_4)
         self.gridLayout.addLayout(self.verticalLayout_5, 1, 0, 1, 2)
-
         self.verticalLayout.setObjectName("verticalLayout")
-
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton)
         self.gridLayout.addLayout(self.verticalLayout, 2, 0, 1, 1)
-
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-
         self.pushButton_2.setObjectName("pushButton_2")
         self.verticalLayout_3.addWidget(self.pushButton_2)
         self.gridLayout.addLayout(self.verticalLayout_3, 2, 1, 1, 1)
-
         self.verticalLayout_4.setObjectName("verticalLayout_4")
-
         self.textBrowser.setStyleSheet("background-color: white")
         self.textBrowser.setObjectName("textBrowser")
         self.verticalLayout_4.addWidget(self.textBrowser)
@@ -147,6 +136,7 @@ class Ui_MainWindow(object):
         self.pushButton_4.setText(_translate("MainWindow", "Подключение к базе"))
         self.pushButton.setText(_translate("MainWindow", "Отобразить список всех клиентов"))
         self.pushButton_2.setText(_translate("MainWindow", "Статистика клиентов"))
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication(sys.argv)
