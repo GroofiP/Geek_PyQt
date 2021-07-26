@@ -59,19 +59,26 @@ class Server(metaclass=ServerVerifier):
         return base_all_client
 
     def base_auth_server(self, sock_cli):
-        auth = json.loads(sock_cli.recv(1024).decode("utf-8"))
-        base_data = Storage(PATH, "users")
-        base_data.con_base()
-        session = base_data.session_con()
-        user = session.query(User).filter_by(login=auth).first()
-        if user is None:
-            sock_cli.sendall(json.dumps(True, ensure_ascii=False).encode("utf-8"))
-            info = json.loads(sock_cli.recv(1024).decode("utf-8"))
-            base_data = Storage(PATH, "users", {"login": auth, "information": info})
-            base_data.add_base()
-            base_data.metadata.clear()
-        else:
-            sock_cli.sendall(json.dumps("Вы авторизованы", ensure_ascii=False).encode("utf-8"))
+        while True:
+            auth = json.loads(sock_cli.recv(1024).decode("utf-8"))
+            password = json.loads(sock_cli.recv(1024).decode("utf-8"))
+            print(password)
+            base_data = Storage(PATH, "users")
+            base_data.con_base()
+            session = base_data.session_con()
+            user = session.query(User).filter_by(login=auth).first()
+            if user is None:
+                sock_cli.sendall(json.dumps(True, ensure_ascii=False).encode("utf-8"))
+                info = json.loads(sock_cli.recv(1024).decode("utf-8"))
+                base_data = Storage(PATH, "users", {"login": auth, "password": password, "information": info})
+                base_data.add_base()
+                base_data.metadata.clear()
+            else:
+                if password == user.password:
+                    sock_cli.sendall(json.dumps("Вы авторизованы", ensure_ascii=False).encode("utf-8"))
+                    break
+                else:
+                    sock_cli.sendall(json.dumps("Вы не авторизованы", ensure_ascii=False).encode("utf-8"))
         user = session.query(User).filter_by(login=auth).first()
         self.base_history_client(sock_cli, user.id)
         return {user.login: user.id}

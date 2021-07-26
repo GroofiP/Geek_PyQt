@@ -1,5 +1,6 @@
 import argparse
 import dis
+import hashlib
 import json
 from socket import socket, AF_INET, SOCK_STREAM
 
@@ -62,16 +63,25 @@ class Client(metaclass=ClientVerifier):
         return item
 
     def auth_client(self):
-        auth_text = 'Введите, свой новый логин или используйте старый для входа в систему: '
-        info_text = 'Введите, информацию о себе: '
-        auth = self.validate_get(auth_text)
-        self.sock.send(json.dumps(auth, ensure_ascii=False).encode("utf-8"))
-        data_message = json.loads(self.sock.recv(1024).decode("utf-8"))
-        if data_message is True:
-            info = self.validate_get(info_text)
-            self.sock.send(json.dumps(info, ensure_ascii=False).encode("utf-8"))
-        else:
-            print(data_message)
+        while True:
+            auth_text = 'Введите, свой новый логин или используйте старый для входа в систему: '
+            password_text = 'Введите пароль: '
+            info_text = 'Введите, информацию о себе: '
+            auth = self.validate_get(auth_text)
+            self.sock.send(json.dumps(auth, ensure_ascii=False).encode("utf-8"))
+            password = self.validate_get(password_text)
+            hash_password = hashlib.sha256(password.encode('utf-8')).hexdigest()
+            self.sock.send(json.dumps(hash_password, ensure_ascii=False).encode("utf-8"))
+            data_message = json.loads(self.sock.recv(1024).decode("utf-8"))
+            if data_message is True:
+                info = self.validate_get(info_text)
+                self.sock.send(json.dumps(info, ensure_ascii=False).encode("utf-8"))
+            elif data_message == "Вы авторизованы":
+                print(data_message)
+                break
+            else:
+                print(data_message)
+
 
     def cli_start(self):
         """Выбор сценария на сервере"""

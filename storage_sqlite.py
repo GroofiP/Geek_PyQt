@@ -18,6 +18,7 @@ class Storage:
         user = Table("users", self.metadata,
                      Column('id', Integer, primary_key=True, unique=True, autoincrement=True),
                      Column("login", String),
+                     Column("password", String),
                      Column("information", String),
                      )
         history = Table("histories_users", self.metadata,
@@ -82,7 +83,8 @@ class Storage:
     def add_base(self):
         if self.table == "users":
             self.con_base()
-            base_a = User(login=self.args_dict["login"], information=self.args_dict["information"])
+            base_a = User(login=self.args_dict["login"], password=self.args_dict["password"],
+                          information=self.args_dict["information"])
         elif self.table == "histories_users":
             self.con_base()
             base_a = History(id_user=self.args_dict["id_user"], date=self.args_dict["date"],
@@ -104,8 +106,9 @@ class Storage:
 
 
 class User:
-    def __init__(self, login, information):
+    def __init__(self, login, password, information):
         self.login = login
+        self.password = password
         self.information = information
 
 
