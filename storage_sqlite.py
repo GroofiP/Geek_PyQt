@@ -137,10 +137,3 @@ class List_Contact:
 
 if __name__ in "__main__":
     pass
-    # base_data = Storage(PATH, "history_message")
-    # base_data.con_base()
-    # session = base_data.session_con()
-    # a = session.query(History_Message.id_send).filter()
-    # b = session.query(History_Message.id_send).count()
-    # # a = session.query(History_Message).
-    # print(a,b)

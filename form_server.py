@@ -10,7 +10,6 @@ import sys
 from threading import Thread
 
 from PyQt5 import QtCore, QtWidgets
-from sqlalchemy import func
 
 from server_cls import Server
 from storage_sqlite import PATH, Storage, User, History_Message
@@ -56,14 +55,11 @@ class Ui_MainWindow(object):
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.horizontalLayout_2.addWidget(self.lineEdit_3)
         self.gridLayout.addLayout(self.horizontalLayout_2, 0, 0, 1, 1)
-
         self.horizontalLayout.setObjectName("horizontalLayout")
-
         self.label.setStyleSheet("border: 4px double black;")
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.horizontalLayout.addWidget(self.label)
-
         self.lineEdit.setMaximumSize(QtCore.QSize(150, 16777215))
         self.lineEdit.setAutoFillBackground(False)
         self.lineEdit.setStyleSheet("background-color: white")
@@ -71,27 +67,19 @@ class Ui_MainWindow(object):
         self.lineEdit.setObjectName("lineEdit")
         self.horizontalLayout.addWidget(self.lineEdit)
         self.gridLayout.addLayout(self.horizontalLayout, 0, 1, 1, 1)
-
         self.verticalLayout_5.setObjectName("verticalLayout_5")
-
         self.pushButton_4.setObjectName("pushButton_4")
         self.verticalLayout_5.addWidget(self.pushButton_4)
         self.gridLayout.addLayout(self.verticalLayout_5, 1, 0, 1, 2)
-
         self.verticalLayout.setObjectName("verticalLayout")
-
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton)
         self.gridLayout.addLayout(self.verticalLayout, 2, 0, 1, 1)
-
         self.verticalLayout_3.setObjectName("verticalLayout_3")
-
         self.pushButton_2.setObjectName("pushButton_2")
         self.verticalLayout_3.addWidget(self.pushButton_2)
         self.gridLayout.addLayout(self.verticalLayout_3, 2, 1, 1, 1)
-
         self.verticalLayout_4.setObjectName("verticalLayout_4")
-
         self.textBrowser.setStyleSheet("background-color: white")
         self.textBrowser.setObjectName("textBrowser")
         self.verticalLayout_4.addWidget(self.textBrowser)
@@ -122,24 +110,21 @@ class Ui_MainWindow(object):
         base_data.con_base()
         session = base_data.session_con()
         users_contacts = session.query(User).all()
-        list_login = []
+        list_login = {}
         for item in users_contacts:
-            list_login.append(item.login)
+            list_login.update({item.id: item.login})
         self.textBrowser.setText(str(list_login))
 
     def server_list_static(self):
-        base_data = Storage(PATH, "users")
+        base_data = Storage(PATH, "history_message")
         base_data.con_base()
         session = base_data.session_con()
-        users_contacts = session.query(User).all()
-        list_k = []
-        list_b = []
-        for a in users_contacts:
-            list_k.append(a.id)
-        for i in list_k:
-            result_1 = session.query(History_Message.message).count()
-            print(result_1)
-        self.textBrowser.setText(str(list_b))
+        id_users = session.query(History_Message).group_by(History_Message.id_send).all()
+        dict_static = {}
+        for item in id_users:
+            user_messages = session.query(History_Message).filter_by(id_send=item.id_send).count()
+            dict_static.update({f"Пользователь: {item.id_send}": f"Сообщений: {user_messages}"})
+        self.textBrowser.setText(str(dict_static))
 
     def retranslate_ui(self, mainwindow):
         _translate = QtCore.QCoreApplication.translate
