@@ -7,8 +7,7 @@ from datetime import datetime
 from socket import socket, AF_INET, SOCK_STREAM
 from threading import Thread
 
-
-from storage_sqlite import Storage, PATH
+from storage_sqlite import Storage, PATH, User, Contacts
 from service import log_send
 
 
@@ -52,87 +51,69 @@ class Server(metaclass=ServerVerifier):
 
     def forms_client(self, base_cli):
         list_v = []
-        for v in self.id_user.values():
+        for v in self.id_user.keys():
             list_v.append(v)
         base_all_client = {list_v[-1]: base_cli[-1]}
         return base_all_client
 
-    @staticmethod
-    def auth_server(sock_cli):
+    def base_auth_server(self, sock_cli):
         auth = json.loads(sock_cli.recv(1024).decode("utf-8"))
         base_data = Storage(PATH, "users")
-        try:
-            check_base = base_data.view_table()
-        except Exception as ex:
-            log_send(ex)
-            check_base = ""
-        if auth not in check_base:
+        base_data.con_base()
+        session = base_data.session_con()
+        user = session.query(User).filter_by(login=auth).first()
+        if user is None:
             sock_cli.sendall(json.dumps(True, ensure_ascii=False).encode("utf-8"))
             info = json.loads(sock_cli.recv(1024).decode("utf-8"))
-            base_data = Storage(PATH, "users", auth, info)
+            base_data = Storage(PATH, "users", {"login": auth, "information": info})
             base_data.add_base()
             base_data.metadata.clear()
         else:
             sock_cli.sendall(json.dumps("Вы авторизованы", ensure_ascii=False).encode("utf-8"))
-        check_base = base_data.view_table_all()
-        for id_auth in check_base:
-            if id_auth[1] == auth:
-                return {id_auth[0]: id_auth[1]}
-
-    def history_client(self, sock_cli):
-        time = datetime.today().strftime("%Y.%m.%d %H:%M:%S")
-        ip_date = sock_cli.getpeername()
-        list_k = []
-        for k in self.id_user.keys():
-            list_k.append(k)
-        base_data = Storage(PATH, "histories_users", login=list_k[-1], date=time, ip_date=ip_date)
-        base_data.metadata.clear()
-        base_data.add_base()
-        base_data.view_table_all()
-        base_data.view_table_main("histories_users")
+        user = session.query(User).filter_by(login=auth).first()
+        self.base_history_client(sock_cli, user.id)
+        return {user.login: user.id}
 
     @staticmethod
-    def add_contacts(sock_cli_send, sock_cli_recv):
-        send_cli_s = sock_cli_send.getpeername()
-        send_cli_r = sock_cli_recv.getpeername()
+    def base_history_client(sock_cli, id_user):
+        time = datetime.today().strftime("%Y.%m.%d %H:%M:%S")
+        ip_date = sock_cli.getpeername()
+        base_data = Storage(PATH, "histories_users",
+                            {"id_user": int(id_user), "date": str(time), "ip_date": str(ip_date)})
+        base_data.metadata.clear()
+        base_data.add_base()
+
+    def base_add_contacts(self, sock_cli_send, sock_cli_recv):
+        send_cli_s = sock_cli_send
+        send_cli_r = sock_cli_recv
         base_data = Storage(PATH, "contacts")
         base_data.metadata.clear()
-        result = base_data.view_table_main("histories_users")
-        list_id_send = []
-        list_id_recv = []
-        for a in result:
-            if str(a[3]) == str(send_cli_s) and str(a[3]) == str(send_cli_r):
-                print(a[1])
-                list_id_send.append(a[1])
-                list_id_recv.append(a[1])
-            elif str(a[3]) == str(send_cli_s):
-                print(a[1])
-                list_id_send.append(a[1])
-            elif str(a[3]) == str(send_cli_r):
-                print(a[1])
-                list_id_recv.append(a[1])
-        print(list_id_recv, list_id_send)
-        base_data = Storage(PATH, "contacts", login=list_id_send[0], login_recv=list_id_recv[0])
+        id_send, id_recv = [], []
+        for key, value in self.client_all.items():
+            if str(value) == str(send_cli_s) and str(value) == str(send_cli_r):
+                id_send = self.id_user[key]
+                id_recv = self.id_user[key]
+            elif str(value) == str(send_cli_s):
+                id_send = self.id_user[key]
+            elif str(value) == str(send_cli_r):
+                id_recv = self.id_user[key]
+        print(id_send, id_recv)
+        base_data = Storage(PATH, "contacts", {"id_send": int(id_send), "id_recv": int(id_recv)})
         base_data.add_base()
-        result = base_data.view_table_main("contacts")
-        for a in result:
-            print(a)
 
-    def contacts(self, sock_cli):
-        list_k = []
+    def base_contacts(self, sock_cli):
+        id_name = ""
         for k, v in self.client_all.items():
             if v == sock_cli:
-                list_k.append(k)
-        for y, e in self.id_user.items():
-            if e == list_k[0]:
-                list_k.append(y)
+                id_name = self.id_user[k]
         base_data = Storage(PATH, "contacts")
-        id_contacts = base_data.get_contacts(f"SELECT id_send, id_recv FROM contacts where id_send == {list_k[1]}")
-        name = {}
-        for k, v in id_contacts:
-            name_contacts = base_data.get_contacts(f"SELECT id, login FROM users where id == {v}")
-            for y, e in name_contacts:
-                name.update({y: e})
+        base_data.con_base()
+        session = base_data.session_con()
+        users_contacts = session.query(Contacts).filter_by(id_send=id_name)
+        name = []
+        for item in users_contacts:
+            user_name = session.query(User).filter_by(id=item.id_recv).first()
+            name.append(user_name.login)
         return name
 
     def server_con(self):
@@ -158,7 +139,7 @@ class Server(metaclass=ServerVerifier):
             sock_cli.sendall(
                 json.dumps(f"Сообщение испорчено, попробуйте отослать ещё раз! ", ensure_ascii=False).encode("utf-8"))
             log_send(ex)
-        self.add_contacts(sock_cli, self.client_all[data_message[0]])
+        self.base_add_contacts(sock_cli, self.client_all[data_message[0]])
 
     def ser_send_g(self, sock_cli):
         """Отправка сообщений группе"""
@@ -212,7 +193,7 @@ class Server(metaclass=ServerVerifier):
             elif data_message == "ВГ":
                 self.ser_add_g(sock_cli)
             elif data_message == "К":
-                dict_contacts = self.contacts(sock_cli)
+                dict_contacts = self.base_contacts(sock_cli)
                 sock_cli.sendall(json.dumps(dict_contacts, ensure_ascii=False).encode("utf-8"))
 
     def server_original(self):
@@ -225,9 +206,7 @@ class Server(metaclass=ServerVerifier):
             except OSError:
                 print("Help")
             else:
-                self.id_user.update(self.auth_server(cli))
-                print(self.id_user)
-                self.history_client(cli)
+                self.id_user.update(self.base_auth_server(cli))
                 print(f"Получен запрос на соединение от {adr}")
                 clients.append(cli)
             finally:

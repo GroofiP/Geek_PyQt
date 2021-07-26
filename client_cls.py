@@ -3,7 +3,7 @@ import dis
 import json
 from socket import socket, AF_INET, SOCK_STREAM
 
-from storage_sqlite import Storage, PATH
+from storage_sqlite import Storage, PATH, History
 from service import log_send
 
 
@@ -34,27 +34,22 @@ class Client(metaclass=ClientVerifier):
 
     def add_message(self, message):
         send_cli_s = self.sock.getsockname()
-        base_data = Storage(PATH, "contacts")
-        base_data.metadata.clear()
-        result = base_data.get_contacts("SELECT * FROM histories_users")
-        list_id_send = []
-        for a in result:
-            if str(a[3]) == str(send_cli_s):
-                list_id_send.append(a[1])
-        base_data = Storage(PATH, "history_message", login=list_id_send[0], message=str(message))
+        base_data = Storage(PATH, "histories_users")
+        base_data.con_base()
+        session = base_data.session_con()
+        user_history = session.query(History).filter_by(ip_date=str(send_cli_s)).first()
+        id_user = user_history.id_user
+        base_data = Storage(PATH, "history_message", {"id_send": int(id_user), "message": message})
         base_data.add_base()
 
     def add_contact(self, cons):
-        print(cons)
         send_cli_s = self.sock.getsockname()
-        base_data = Storage(PATH, "contacts")
-        base_data.metadata.clear()
-        result = base_data.get_contacts("SELECT * FROM histories_users")
-        list_id_send = []
-        for a in result:
-            if str(a[3]) == str(send_cli_s):
-                list_id_send.append(a[1])
-        base_data = Storage(PATH, "list_contacts", login=list_id_send[0], list_conta=str(cons))
+        base_data = Storage(PATH, "histories_users")
+        base_data.con_base()
+        session = base_data.session_con()
+        user_history = session.query(History).filter_by(ip_date=str(send_cli_s)).first()
+        id_user = user_history.id_user
+        base_data = Storage(PATH, "list_contacts", {"id_send": int(id_user), "list_con": cons})
         base_data.add_base()
 
     def auth_client(self):
