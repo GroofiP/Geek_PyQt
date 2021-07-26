@@ -1,5 +1,4 @@
-from sqlalchemy import create_engine, MetaData, Table, Integer, String, Column, ForeignKey, UniqueConstraint, select, \
-    func
+from sqlalchemy import create_engine, MetaData, Table, Integer, String, Column, ForeignKey, UniqueConstraint
 from sqlalchemy.orm import mapper, sessionmaker, registry, relationship
 
 from service import log_send

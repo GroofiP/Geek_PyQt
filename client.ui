@@ -136,7 +136,7 @@ p, li { white-space: pre-wrap; }
      <item>
       <widget class="QPushButton" name="update_contact_local">
        <property name="text">
-        <string>Обновить</string>
+        <string>Добавить</string>
        </property>
       </widget>
      </item>

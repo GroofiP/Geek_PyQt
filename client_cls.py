@@ -141,6 +141,10 @@ class Client(metaclass=ClientVerifier):
                     con = json.loads(self.sock.recv(1024).decode("utf-8"))
                     self.res_queue.put(con)
                     self.add_contact(con)
+                elif msg_1 == "А":
+                    self.sock.settimeout(5)
+                    list_local_user = json.loads(self.sock.recv(1024).decode("utf-8"))
+                    self.res_queue.put(list_local_user)
                 else:
                     pass
 

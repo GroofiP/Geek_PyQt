@@ -33,7 +33,7 @@ class ServerVerifier(type):
                 if "connect" in a:
                     raise Exception("Такого метода как 'connect' не должно быть в классе")
                 elif "SOCK_STREAM" in a:
-                    n = n + 1
+                    n += 1
         if n == 0:
             raise Exception(
                 "Такая функция у сокета,как 'SOCK_STREAM' должна быть в классе, так как соединение должно быть TCP")
@@ -198,6 +198,11 @@ class Server(metaclass=ServerVerifier):
             elif data_message == "К":
                 dict_contacts = self.base_contacts(sock_cli)
                 sock_cli.sendall(json.dumps(dict_contacts, ensure_ascii=False).encode("utf-8"))
+            elif data_message == "А":
+                list_contact = []
+                for k in self.client_all.keys():
+                    list_contact.append(k)
+                sock_cli.sendall(json.dumps(list_contact, ensure_ascii=False).encode("utf-8"))
 
     def server_original(self):
         """Запуск сервера"""
