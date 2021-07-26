@@ -7,6 +7,8 @@ from datetime import datetime
 from socket import socket, AF_INET, SOCK_STREAM
 from threading import Thread
 
+from sqlalchemy.exc import IntegrityError
+
 from storage_sqlite import Storage, PATH, User, Contacts
 from service import log_send
 
@@ -97,7 +99,6 @@ class Server(metaclass=ServerVerifier):
                 id_send = self.id_user[key]
             elif str(value) == str(send_cli_r):
                 id_recv = self.id_user[key]
-        print(id_send, id_recv)
         base_data = Storage(PATH, "contacts", {"id_send": int(id_send), "id_recv": int(id_recv)})
         base_data.add_base()
 
@@ -131,7 +132,6 @@ class Server(metaclass=ServerVerifier):
         for k, v in self.client_all.items():
             if sock_cli == v:
                 dict_message = {k: data_message[1]}
-        print(self.client_all[data_message[0]])
         try:
             self.client_all[data_message[0]].sendall(
                 json.dumps(dict_message, ensure_ascii=False).encode("utf-8"))
@@ -139,7 +139,10 @@ class Server(metaclass=ServerVerifier):
             sock_cli.sendall(
                 json.dumps(f"Сообщение испорчено, попробуйте отослать ещё раз! ", ensure_ascii=False).encode("utf-8"))
             log_send(ex)
-        self.base_add_contacts(sock_cli, self.client_all[data_message[0]])
+        try:
+            self.base_add_contacts(sock_cli, self.client_all[data_message[0]])
+        except IntegrityError:
+            print("Уже добавлен в контакты")
 
     def ser_send_g(self, sock_cli):
         """Отправка сообщений группе"""

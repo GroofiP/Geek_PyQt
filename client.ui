@@ -26,9 +26,9 @@
       <height>72</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
+    <layout class="QHBoxLayout" name="massage_block">
      <item>
-      <widget class="QTextEdit" name="textEdit">
+      <widget class="QTextEdit" name="message">
        <property name="maximumSize">
         <size>
          <width>500</width>
@@ -48,7 +48,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="send">
        <property name="enabled">
         <bool>true</bool>
        </property>
@@ -77,9 +77,9 @@ p, li { white-space: pre-wrap; }
       <height>281</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3">
+    <layout class="QVBoxLayout" name="list_contact_view">
      <item>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="contact_label">
        <property name="text">
         <string>Список ваших
 контактов</string>
@@ -90,14 +90,14 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="listView">
+      <widget class="QListWidget" name="contact_view">
        <property name="styleSheet">
         <string notr="true">background-color: white</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="update_contact">
        <property name="text">
         <string>Обновить</string>
        </property>
@@ -114,9 +114,9 @@ p, li { white-space: pre-wrap; }
       <height>281</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout_4">
+    <layout class="QVBoxLayout" name="list_local_contact_view">
      <item>
-      <widget class="QLabel" name="label_4">
+      <widget class="QLabel" name="contact_local_label">
        <property name="text">
         <string>Список локальных
 контактов</string>
@@ -127,14 +127,14 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QListView" name="listView_3">
+      <widget class="QListWidget" name="contact_local_view">
        <property name="styleSheet">
         <string notr="true">background-color: white</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="update_contact_local">
        <property name="text">
         <string>Обновить</string>
        </property>
@@ -151,9 +151,9 @@ p, li { white-space: pre-wrap; }
       <height>451</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="chat">
      <item>
-      <widget class="QLabel" name="label_2">
+      <widget class="QLabel" name="chat_label">
        <property name="text">
         <string>ЧАТ</string>
        </property>
@@ -163,7 +163,7 @@ p, li { white-space: pre-wrap; }
       </widget>
      </item>
      <item>
-      <widget class="QTextBrowser" name="textBrowser">
+      <widget class="QTextBrowser" name="chat_view">
        <property name="styleSheet">
         <string notr="true">background-color: white</string>
        </property>
@@ -180,22 +180,18 @@ p, li { white-space: pre-wrap; }
       <height>31</height>
      </rect>
     </property>
-    <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <layout class="QHBoxLayout" name="connect">
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_5">
-       <item>
-        <widget class="QPushButton" name="pushButton_4">
-         <property name="text">
-          <string>Подключение к чату</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
+      <widget class="QPushButton" name="connect_btn">
+       <property name="text">
+        <string>Подключение к чату</string>
+       </property>
+      </widget>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <layout class="QHBoxLayout" name="ip_block">
        <item>
-        <widget class="QLabel" name="label_6">
+        <widget class="QLabel" name="ip_label">
          <property name="styleSheet">
           <string notr="true">border: 4px double black;</string>
          </property>
@@ -208,7 +204,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit">
+        <widget class="QLineEdit" name="ip_edit">
          <property name="maximumSize">
           <size>
            <width>150</width>
@@ -229,9 +225,9 @@ p, li { white-space: pre-wrap; }
       </layout>
      </item>
      <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <layout class="QHBoxLayout" name="tcp_block">
        <item>
-        <widget class="QLabel" name="label_5">
+        <widget class="QLabel" name="tcp_label">
          <property name="styleSheet">
           <string notr="true">border: 4px double black;</string>
          </property>
@@ -250,7 +246,7 @@ p, li { white-space: pre-wrap; }
         </widget>
        </item>
        <item>
-        <widget class="QLineEdit" name="lineEdit_3">
+        <widget class="QLineEdit" name="tcp_edit">
          <property name="maximumSize">
           <size>
            <width>150</width>
