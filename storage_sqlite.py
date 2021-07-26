@@ -1,28 +1,18 @@
-from sqlalchemy import create_engine, MetaData, Table, Integer, String, Column, text, ForeignKey, UniqueConstraint
+from sqlalchemy import create_engine, MetaData, Table, Integer, String, Column, ForeignKey, UniqueConstraint, select, \
+    func
 from sqlalchemy.orm import mapper, sessionmaker, registry, relationship
 
 from service import log_send
 
 PATH = "sqlite:///sqlite3.db"
-DICT_TABLE = {
-    "users": ["login", "information"],
-    "histories_users": ["date", "ip_date"]
-}
 
 
 class Storage:
-    def __init__(self, path, table, login=None, information=None, date=None, ip_date=None, login_recv=None,
-                 message=None, list_conta=None):
+    def __init__(self, path, table, args_dict=None):
         self.engine = create_engine(path)
-        self.login = login
-        self.information = information
-        self.date = date
-        self.ip_date = ip_date
-        self.table = table
         self.metadata = MetaData()
-        self.login_recv = login_recv
-        self.message = message
-        self.list_conta = list_conta
+        self.table = table
+        self.args_dict = args_dict
 
     def con_base(self):
         mapper_registry = registry()
@@ -53,7 +43,6 @@ class Storage:
                               Column("id_send", Integer),
                               Column("list_con", String),
                               )
-
         if self.table == "users":
             try:
                 mapper_registry.map_imperatively(User, user)
@@ -86,7 +75,7 @@ class Storage:
             except Exception as ex:
                 log_send(ex)
 
-    def main_session(self):
+    def session_con(self):
         self.metadata.create_all(self.engine)
         session_cls = sessionmaker(bind=self.engine)
         return session_cls()
@@ -94,52 +83,25 @@ class Storage:
     def add_base(self):
         if self.table == "users":
             self.con_base()
-            base_a = User(login=str(self.login), information=str(self.information))
+            base_a = User(login=self.args_dict["login"], information=self.args_dict["information"])
         elif self.table == "histories_users":
             self.con_base()
-            base_a = History(id_user=int(self.login), date=str(self.date), ip_date=str(self.ip_date))
+            base_a = History(id_user=self.args_dict["id_user"], date=self.args_dict["date"],
+                             ip_date=self.args_dict["ip_date"])
         elif self.table == "contacts":
             self.con_base()
-            base_a = Contacts(id_send=self.login, id_recv=self.login_recv)
+            base_a = Contacts(id_send=self.args_dict["id_send"], id_recv=self.args_dict["id_recv"])
         elif self.table == "history_message":
             self.con_base()
-            base_a = History_Message(id_send=self.login, message=self.message)
+            base_a = History_Message(id_send=self.args_dict["id_send"], message=self.args_dict["message"])
         elif self.table == "list_contacts":
             self.con_base()
-            l_s = str(self.list_conta)
-            print(type(l_s))
-            base_a = List_Contact(id_send=self.login, list_con=l_s)
+            base_a = List_Contact(id_send=self.args_dict["id_send"], list_con=str(self.args_dict["list_con"]))
         else:
             base_a = ""
-        self.metadata.create_all(self.engine)
-        session_cls = sessionmaker(bind=self.engine)
-        session = session_cls()
-        session.add(base_a)
-        session.commit()
-
-    def view_table(self):
-        t = text("SELECT * FROM users")
-        result = self.engine.connect().execute(t)
-        list_result = []
-        for a in result:
-            print(a)
-            list_result.append(a[1])
-        return list_result
-
-    def view_table_all(self):
-        t = text("SELECT * FROM users")
-        result = self.engine.connect().execute(t)
-        return result
-
-    def view_table_main(self, main):
-        t = text("SELECT * FROM " + main)
-        result = self.engine.connect().execute(t)
-        return result
-
-    def get_contacts(self, text_sel):
-        t = text(text_sel)
-        result = self.engine.connect().execute(t)
-        return result
+        session_call = self.session_con()
+        session_call.add(base_a)
+        session_call.commit()
 
 
 class User:

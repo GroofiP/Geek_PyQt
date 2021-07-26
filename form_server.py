@@ -12,7 +12,7 @@ from threading import Thread
 from PyQt5 import QtCore, QtWidgets
 
 from server_cls import Server
-from storage_sqlite import PATH, Storage
+from storage_sqlite import PATH, Storage, User, History_Message
 
 
 class Ui_MainWindow(object):
@@ -51,7 +51,7 @@ class Ui_MainWindow(object):
         self.lineEdit_3.setMaximumSize(QtCore.QSize(150, 16777215))
         self.lineEdit_3.setAutoFillBackground(False)
         self.lineEdit_3.setStyleSheet("background-color: white")
-        self.lineEdit_3.setText("")
+        self.lineEdit_3.setText("7777")
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.horizontalLayout_2.addWidget(self.lineEdit_3)
         self.gridLayout.addLayout(self.horizontalLayout_2, 0, 0, 1, 1)
@@ -63,7 +63,7 @@ class Ui_MainWindow(object):
         self.lineEdit.setMaximumSize(QtCore.QSize(150, 16777215))
         self.lineEdit.setAutoFillBackground(False)
         self.lineEdit.setStyleSheet("background-color: white")
-        self.lineEdit.setText("")
+        self.lineEdit.setText("127.0.0.1")
         self.lineEdit.setObjectName("lineEdit")
         self.horizontalLayout.addWidget(self.lineEdit)
         self.gridLayout.addLayout(self.horizontalLayout, 0, 1, 1, 1)
@@ -107,26 +107,24 @@ class Ui_MainWindow(object):
 
     def server_list_contact(self):
         base_data = Storage(PATH, "users")
-        result = base_data.get_contacts(f"SELECT * FROM users")
-        list_k = []
-        for a in result:
-            list_k.append(a)
-        self.textBrowser.setText(str(list_k))
+        base_data.con_base()
+        session = base_data.session_con()
+        users_contacts = session.query(User).all()
+        list_login = {}
+        for item in users_contacts:
+            list_login.update({item.id: item.login})
+        self.textBrowser.setText(str(list_login))
 
     def server_list_static(self):
-        base_data = Storage(PATH, "users")
-        result = base_data.get_contacts(f"SELECT * FROM users")
-        list_k = []
-        list_b = []
-        for a in result:
-            list_k.append(a[0])
-            print(a)
-        for i in list_k:
-            result_1 = base_data.get_contacts(
-                f"SELECT id_send, COUNT(message) FROM history_message where id_send == {i}")
-            for v in result_1:
-                list_b.append(v)
-        self.textBrowser.setText(str(list_b))
+        base_data = Storage(PATH, "history_message")
+        base_data.con_base()
+        session = base_data.session_con()
+        id_users = session.query(History_Message).group_by(History_Message.id_send).all()
+        dict_static = {}
+        for item in id_users:
+            user_messages = session.query(History_Message).filter_by(id_send=item.id_send).count()
+            dict_static.update({f"Пользователь: {item.id_send}": f"Сообщений: {user_messages}"})
+        self.textBrowser.setText(str(dict_static))
 
     def retranslate_ui(self, mainwindow):
         _translate = QtCore.QCoreApplication.translate
