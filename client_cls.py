@@ -1,13 +1,10 @@
 import argparse
 import dis
-import hashlib
 import json
 from socket import socket, AF_INET, SOCK_STREAM
 
-from django.contrib.auth.decorators import login_required
-
 from storage_sqlite import Storage, PATH, History
-from service import log_send
+from service import log_send, login_required
 
 
 class ClientVerifier(type):
@@ -80,7 +77,7 @@ class Client(metaclass=ClientVerifier):
             data_message = json.loads(self.sock.recv(1024).decode("utf-8"))
             if data_message == "Вы авторизованы":
                 print(data_message)
-                break
+                return auth
             else:
                 print(data_message)
 
@@ -128,11 +125,22 @@ class Client(metaclass=ClientVerifier):
         msg_a = self.validate_get(msg_a_text)
         self.sock.send(json.dumps(msg_a, ensure_ascii=False).encode("utf-8"))
 
+    @login_required
+    def cli_a(self, auth=None):
+        self.sock.settimeout(5)
+        list_local_user = json.loads(self.sock.recv(1024).decode("utf-8"))
+        if auth == "Доступно только Groofi":
+            pass
+        elif self.res_queue is None:
+            print(list_local_user)
+        elif auth is not None:
+            self.res_queue.put(list_local_user)
+
     def client_original(self):
         """Запуск клиента"""
         with self.sock as s:
             s.connect((self.ip, self.tcp))
-            self.auth_client()
+            auth = self.auth_client()
             while True:
                 self.cli_rec()
                 msg_1 = self.cli_start()
@@ -156,9 +164,7 @@ class Client(metaclass=ClientVerifier):
                         self.res_queue.put(con)
                     self.add_contact(con)
                 elif msg_1 == "А":
-                    self.sock.settimeout(5)
-                    list_local_user = json.loads(self.sock.recv(1024).decode("utf-8"))
-                    self.res_queue.put(list_local_user)
+                    self.cli_a(auth)
                 else:
                     pass
 

@@ -35,5 +35,17 @@ def client_start_3(n=3):
         subprocess.Popen(f"lxterminal -t sample{i} -e bash -c 'python3 client.py ; read v '", shell=True)
 
 
+def login_required(func):
+    def wrapper(*args):
+        if args[1] == "Groofi":
+            print("Доступ разрешен")
+            func(args[0], args[1])
+        else:
+            print("Доступно только Groofi")
+            func(args[0], "Доступно только Groofi")
+
+    return wrapper
+
+
 if __name__ == "__main__":
     pass
