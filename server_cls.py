@@ -1,9 +1,13 @@
 import argparse
 import dis
+import hashlib
 import json
+import random
 import select
+import string
 
 from datetime import datetime
+from json import JSONDecodeError
 from socket import socket, AF_INET, SOCK_STREAM
 from threading import Thread
 
@@ -58,21 +62,53 @@ class Server(metaclass=ServerVerifier):
         base_all_client = {list_v[-1]: base_cli[-1]}
         return base_all_client
 
+    @staticmethod
+    def random_char(y):
+        return ''.join(random.choice(string.ascii_letters) for x in range(y))
+
+    @staticmethod
+    def save_json(auth, salt):
+        try:
+            with open("password_salt.json", "r") as file_a:
+                file_content = file_a.read()
+                templates = json.loads(file_content)
+            with open("password_salt.json", "w") as file_a:
+                templates.update({auth: salt})
+                file_a.write(json.dumps(templates))
+        except JSONDecodeError:
+            with open("password_salt.json", "w") as file_a:
+                file_a.write(json.dumps({auth: salt}))
+
+
     def base_auth_server(self, sock_cli):
-        auth = json.loads(sock_cli.recv(1024).decode("utf-8"))
-        base_data = Storage(PATH, "users")
-        base_data.con_base()
-        session = base_data.session_con()
-        user = session.query(User).filter_by(login=auth).first()
-        if user is None:
-            sock_cli.sendall(json.dumps(True, ensure_ascii=False).encode("utf-8"))
-            info = json.loads(sock_cli.recv(1024).decode("utf-8"))
-            base_data = Storage(PATH, "users", {"login": auth, "information": info})
-            base_data.add_base()
-            base_data.metadata.clear()
-        else:
-            sock_cli.sendall(json.dumps("Вы авторизованы", ensure_ascii=False).encode("utf-8"))
-        user = session.query(User).filter_by(login=auth).first()
+        while True:
+            auth = json.loads(sock_cli.recv(1024).decode("utf-8"))
+            base_data = Storage(PATH, "users")
+            base_data.con_base()
+            session = base_data.session_con()
+            user = session.query(User).filter_by(login=auth).first()
+            password = json.loads(sock_cli.recv(1024).decode("utf-8"))
+            if user is None:
+                salt = self.random_char(8)
+                key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt.encode('utf-8'), 100000)
+                sock_cli.sendall(json.dumps(True, ensure_ascii=False).encode("utf-8"))
+                self.save_json(auth, salt)
+                info = json.loads(sock_cli.recv(1024).decode("utf-8"))
+                base_data = Storage(PATH, "users", {"login": auth, "password": key, "information": info})
+                base_data.add_base()
+                base_data.metadata.clear()
+            else:
+                sock_cli.sendall(json.dumps(False, ensure_ascii=False).encode("utf-8"))
+                with open("password_salt.json", "r") as file_a:
+                    file_content = file_a.read()
+                    templates = json.loads(file_content)
+                key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), templates[auth].encode('utf-8'), 100000)
+            user = session.query(User).filter_by(login=auth).first()
+            if key == user.password:
+                sock_cli.sendall(json.dumps("Вы авторизованы", ensure_ascii=False).encode("utf-8"))
+                break
+            else:
+                sock_cli.sendall(json.dumps("Вы не авторизованы", ensure_ascii=False).encode("utf-8"))
         self.base_history_client(sock_cli, user.id)
         return {user.login: user.id}
 
