@@ -3,4 +3,3 @@ __pycache__/
 legacy/
 log/ap*
 help.py
-password_salt.json
