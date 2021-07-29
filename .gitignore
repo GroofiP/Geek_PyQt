@@ -3,3 +3,4 @@ __pycache__/
 legacy/
 log/ap*
 help.py
+sqlite3.db
