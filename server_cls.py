@@ -4,6 +4,7 @@ import json
 import select
 
 from datetime import datetime
+from json import JSONDecodeError
 from socket import socket, AF_INET, SOCK_STREAM
 from threading import Thread
 
@@ -99,7 +100,10 @@ class Server(metaclass=ServerVerifier):
                 id_send = self.id_user[key]
             elif str(value) == str(send_cli_r):
                 id_recv = self.id_user[key]
-        base_data = Storage(PATH, "contacts", {"id_send": int(id_send), "id_recv": int(id_recv)})
+        try:
+            base_data = Storage(PATH, "contacts", {"id_send": int(id_send), "id_recv": int(id_recv)})
+        except TypeError:
+            return
         base_data.add_base()
 
     def base_contacts(self, sock_cli):
@@ -136,9 +140,12 @@ class Server(metaclass=ServerVerifier):
             self.client_all[data_message[0]].sendall(
                 json.dumps(dict_message, ensure_ascii=False).encode("utf-8"))
         except Exception as ex:
-            sock_cli.sendall(
-                json.dumps(f"Сообщение испорчено, попробуйте отослать ещё раз! ", ensure_ascii=False).encode("utf-8"))
-            log_send(ex)
+            try:
+                sock_cli.sendall(
+                    json.dumps(f"Сообщение испорчено, попробуйте отослать ещё раз! ", ensure_ascii=False).encode("utf-8"))
+                log_send(ex)
+            except IndexError:
+                return
         try:
             self.base_add_contacts(sock_cli, self.client_all[data_message[0]])
         except IntegrityError:
@@ -188,7 +195,15 @@ class Server(metaclass=ServerVerifier):
     def ser_run(self, sock_cli):
         """Запуск внутреннего сценария сервера"""
         while True:
-            data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
+            try:
+                data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
+            except JSONDecodeError:
+                data_message = "Z"
+                try:
+                    sock_cli.sendall(
+                        json.dumps(f"Передача не состоялась, попробуйте ещё раз! ", ensure_ascii=False).encode("utf-8"))
+                except BrokenPipeError:
+                    return
             if data_message == "П":
                 self.ser_send_p(sock_cli)
             elif data_message == "Г":

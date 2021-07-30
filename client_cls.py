@@ -124,7 +124,11 @@ class Client(metaclass=ClientVerifier):
             self.auth_client()
             while True:
                 self.cli_rec()
-                msg_1 = self.cli_start()
+                try:
+                    msg_1 = self.cli_start()
+                except KeyboardInterrupt:
+                    print("\nДо свидания!")
+                    msg_1 = "ВЫХОД"
                 if msg_1 == 'П':
                     self.cli_rec()
                     self.cli_send_p()
@@ -145,6 +149,8 @@ class Client(metaclass=ClientVerifier):
                     self.sock.settimeout(5)
                     list_local_user = json.loads(self.sock.recv(1024).decode("utf-8"))
                     self.res_queue.put(list_local_user)
+                elif msg_1 == 'ВЫХОД':
+                    return
                 else:
                     pass
 
