@@ -176,10 +176,10 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(mainwindow)
 
     def append_log(self, text, severity):
-        text = repr(text)
+        text = text
 
         if severity == OutputLogger.Severity.ERROR:
-            text = '<b>{}</b>'.format(text)
+            text = f'<b>{text}</b>'
 
         self.chat_view.append(text)
 
@@ -188,6 +188,7 @@ class Ui_MainWindow(object):
         self.res_queue.put(text)
 
     def change_user(self, item):
+        self.res_queue.put("П")
         self.res_queue.put(item.text())
 
     def send_k(self):
@@ -211,7 +212,10 @@ class Ui_MainWindow(object):
     def view_local_contacts(self):
         self.contact_local_view.clear()
         list_contact = self.res_queue.get()
-        self.contact_local_view.addItems(list_contact)
+        try:
+            self.contact_local_view.addItems(list_contact)
+        except TypeError:
+            pass
 
     def client_click(self):
         a = self.ip_edit.text()

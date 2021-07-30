@@ -127,10 +127,9 @@ class Client(metaclass=ClientVerifier):
 
     @login_required
     def cli_a(self, auth=None):
-        self.sock.settimeout(5)
         list_local_user = json.loads(self.sock.recv(1024).decode("utf-8"))
         if auth == "Доступно только Groofi":
-            pass
+            self.res_queue.put("Нету доступа")
         elif self.res_queue is None:
             print(list_local_user)
         elif auth is not None:
@@ -143,7 +142,11 @@ class Client(metaclass=ClientVerifier):
             auth = self.auth_client()
             while True:
                 self.cli_rec()
-                msg_1 = self.cli_start()
+                try:
+                    msg_1 = self.cli_start()
+                except KeyboardInterrupt:
+                    print("\nДо свидания!")
+                    msg_1 = "ВЫХОД"
                 if msg_1 == 'П':
                     self.cli_rec()
                     self.cli_send_p()
@@ -163,6 +166,8 @@ class Client(metaclass=ClientVerifier):
                     else:
                         self.res_queue.put(con)
                     self.add_contact(con)
+                elif msg_1 == 'ВЫХОД':
+                    return
                 elif msg_1 == "А":
                     self.cli_a(auth)
                 else:

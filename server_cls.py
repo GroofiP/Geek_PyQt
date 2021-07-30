@@ -224,7 +224,15 @@ class Server(metaclass=ServerVerifier):
     def ser_run(self, sock_cli):
         """Запуск внутреннего сценария сервера"""
         while True:
-            data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
+            try:
+                data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
+            except JSONDecodeError:
+                data_message = "Z"
+                try:
+                    sock_cli.sendall(
+                        json.dumps(f"Передача не состоялась, попробуйте ещё раз! ", ensure_ascii=False).encode("utf-8"))
+                except BrokenPipeError:
+                    return
             if data_message == "П":
                 self.ser_send_p(sock_cli)
             elif data_message == "Г":
