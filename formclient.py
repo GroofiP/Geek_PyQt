@@ -12,7 +12,7 @@ from queue import Queue
 from threading import Thread
 from PyQt5 import QtCore, QtWidgets
 from PyQt5.QtCore import QObject, pyqtSignal, QTimer
-from client_cls import Client
+from clientcls import Client
 
 
 class OutputLogger(QObject):
@@ -43,10 +43,10 @@ sys.stdout = OUTPUT_LOGGER_STDOUT
 sys.stderr = OUTPUT_LOGGER_STDERR
 
 
-class Ui_MainWindow(object):
-    def __init__(self, mainwindow):
+class UiMainWindow(object):
+    def __init__(self, main_window):
         super().__init__()
-        self.centralwidget = QtWidgets.QWidget(mainwindow)
+        self.centralwidget = QtWidgets.QWidget(main_window)
         self.horizontalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.massage_block = QtWidgets.QHBoxLayout(self.horizontalLayoutWidget)
         self.message = QtWidgets.QTextEdit(self.horizontalLayoutWidget)
@@ -57,7 +57,9 @@ class Ui_MainWindow(object):
         self.contact_view = QtWidgets.QListWidget(self.verticalLayoutWidget_2)
         self.update_contact = QtWidgets.QPushButton(self.verticalLayoutWidget_2)
         self.verticalLayoutWidget_3 = QtWidgets.QWidget(self.centralwidget)
-        self.list_local_contact_view = QtWidgets.QVBoxLayout(self.verticalLayoutWidget_3)
+        self.list_local_contact_view = QtWidgets.QVBoxLayout(
+            self.verticalLayoutWidget_3
+        )
         self.contact_local_label = QtWidgets.QLabel(self.verticalLayoutWidget_3)
         self.contact_local_view = QtWidgets.QListWidget(self.verticalLayoutWidget_3)
         self.update_contact_local = QtWidgets.QPushButton(self.verticalLayoutWidget_3)
@@ -78,10 +80,10 @@ class Ui_MainWindow(object):
         OUTPUT_LOGGER_STDOUT.emit_write.connect(self.append_log)
         OUTPUT_LOGGER_STDERR.emit_write.connect(self.append_log)
 
-    def setup_ui(self, mainwindow):
-        mainwindow.setObjectName("MainWindow")
-        mainwindow.resize(800, 620)
-        mainwindow.setStyleSheet("background-color : rgb(114, 159, 207)")
+    def setup_ui(self, main_window):
+        main_window.setObjectName("MainWindow")
+        main_window.resize(800, 620)
+        main_window.setStyleSheet("background-color : rgb(114, 159, 207)")
 
         self.centralwidget.setObjectName("centralwidget")
         self.horizontalLayoutWidget.setGeometry(QtCore.QRect(200, 529, 591, 72))
@@ -164,22 +166,22 @@ class Ui_MainWindow(object):
         self.tcp_edit.setObjectName("tcp_edit")
         self.tcp_block.addWidget(self.tcp_edit)
         self.connect.addLayout(self.tcp_block)
-        mainwindow.setCentralWidget(self.centralwidget)
+        main_window.setCentralWidget(self.centralwidget)
 
-        self.retranslate_ui(mainwindow)
+        self.retranslate_ui(main_window)
         self.connect_btn.clicked.connect(self.client_click)
         self.send.clicked.connect(self.terminal_answer)
         self.update_contact.clicked.connect(self.send_k)
         self.update_contact_local.clicked.connect(self.send_p)
         self.contact_view.itemDoubleClicked.connect(self.change_user)
         self.contact_local_view.itemDoubleClicked.connect(self.add_contact)
-        QtCore.QMetaObject.connectSlotsByName(mainwindow)
+        QtCore.QMetaObject.connectSlotsByName(main_window)
 
     def append_log(self, text, severity):
         text = text
 
         if severity == OutputLogger.Severity.ERROR:
-            text = f'<b>{text}</b>'
+            text = f"<b>{text}</b>"
 
         self.chat_view.append(text)
 
@@ -230,15 +232,17 @@ class Ui_MainWindow(object):
         else:
             self.chat_view.setText("Подключение не удалось")
 
-    def retranslate_ui(self, mainwindow):
+    def retranslate_ui(self, main_window):
         _translate = QtCore.QCoreApplication.translate
-        mainwindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        main_window.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.send.setText(_translate("MainWindow", "Отправить"))
-        self.contact_label.setText(_translate("MainWindow", "Список ваших\n"
-                                                            "контактов"))
+        self.contact_label.setText(
+            _translate("MainWindow", "Список ваших\n" "контактов")
+        )
         self.update_contact.setText(_translate("MainWindow", "Обновить"))
-        self.contact_local_label.setText(_translate("MainWindow", "Список локальных\n"
-                                                                  "контактов"))
+        self.contact_local_label.setText(
+            _translate("MainWindow", "Список локальных\n" "контактов")
+        )
         self.update_contact_local.setText(_translate("MainWindow", "Обновить"))
         self.chat_label.setText(_translate("MainWindow", "ЧАТ"))
         self.connect_btn.setText(_translate("MainWindow", "Подключение к чату"))
@@ -246,10 +250,10 @@ class Ui_MainWindow(object):
         self.tcp_label.setText(_translate("MainWindow", "TCP"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     window = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow(window)
+    ui = UiMainWindow(window)
     ui.setup_ui(window)
     window.show()
     sys.exit(app.exec_())
