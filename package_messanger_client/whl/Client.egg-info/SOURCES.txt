@@ -1,0 +1,12 @@
+formclient.py
+setup.py
+Client.egg-info/PKG-INFO
+Client.egg-info/SOURCES.txt
+Client.egg-info/dependency_links.txt
+Client.egg-info/requires.txt
+Client.egg-info/top_level.txt
+src/clientcls.py
+src/service.py
+src/storagesqlite.py
+src/log/clientlogconfig.py
+src/log/serverlogconfig.py

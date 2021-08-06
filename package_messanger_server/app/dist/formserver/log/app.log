@@ -1,0 +1,1998 @@
+ 2021-07-30 00:44:27,721 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 00:44:28,731 INFO service timed out
+ 2021-07-30 00:44:34,514 INFO service Список клиентов: {'Groofi': <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39756)>}
+ 2021-07-30 00:44:48,087 INFO service {'Groofi': 'Groofi'}
+ 2021-07-30 00:44:49,088 INFO service timed out
+ 2021-07-30 00:45:22,325 INFO service 
+ 2021-07-30 00:45:29,158 INFO service 
+ 2021-07-30 00:45:29,172 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 00:45:30,152 INFO service timed out
+ 2021-07-30 00:45:35,896 INFO service Список клиентов: {'Groofi': <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39756)>, 'Alina': <socket.socket fd=22, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39758)>}
+ 2021-07-30 00:45:48,252 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 00:45:49,252 INFO service timed out
+ 2021-07-30 00:45:50,254 INFO service timed out
+ 2021-07-30 00:45:57,197 INFO service {'Alina': 'Привет'}
+ 2021-07-30 00:46:06,757 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 00:46:06,761 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 00:46:07,769 INFO service timed out
+ 2021-07-30 00:46:10,728 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 00:46:10,731 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014868674304 and this is thread id 140014590191360.
+ 2021-07-30 00:46:10,732 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f57cd38b210>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014868674304 and this is thread id 140014590191360.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014868674304 and this is thread id 140014590191360.
+ 2021-07-30 00:46:10,732 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014868674304 and this is thread id 140014590191360.
+ 2021-07-30 00:46:10,732 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f57af67e030>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014868674304 and this is thread id 140014590191360.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014868674304 and this is thread id 140014590191360.
+ 2021-07-30 00:46:10,732 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014572881664 and this is thread id 140014590191360.
+ 2021-07-30 00:46:10,732 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f57af67e120>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014572881664 and this is thread id 140014590191360.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014572881664 and this is thread id 140014590191360.
+ 2021-07-30 00:46:10,735 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 00:46:11,751 INFO service timed out
+ 2021-07-30 00:46:15,933 INFO service timed out
+ 2021-07-30 00:46:18,168 INFO service timed out
+ 2021-07-30 02:44:05,154 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140100088362752 and this is thread id 140100534871872.
+ 2021-07-30 02:44:05,156 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f6bacfb6e40>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140100088362752 and this is thread id 140100534871872.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140100088362752 and this is thread id 140100534871872.
+ 2021-07-30 02:44:05,156 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140100088362752 and this is thread id 140100534871872.
+ 2021-07-30 02:44:05,156 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f6bac284030>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140100088362752 and this is thread id 140100534871872.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140100088362752 and this is thread id 140100534871872.
+ 2021-07-30 02:44:12,916 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139674618164992 and this is thread id 139675063613248.
+ 2021-07-30 02:44:12,916 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f089ce9ce40>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139674618164992 and this is thread id 139675063613248.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139674618164992 and this is thread id 139675063613248.
+ 2021-07-30 02:44:12,916 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139674618164992 and this is thread id 139675063613248.
+ 2021-07-30 02:44:12,917 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f089c1d3030>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139674618164992 and this is thread id 139675063613248.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139674618164992 and this is thread id 139675063613248.
+ 2021-07-30 02:44:40,582 INFO service 
+ 2021-07-30 02:44:40,620 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014590191360 and this is thread id 140014868674304.
+ 2021-07-30 02:44:40,620 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f57af67e210>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014590191360 and this is thread id 140014868674304.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014590191360 and this is thread id 140014868674304.
+ 2021-07-30 02:44:40,622 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 02:44:41,593 INFO service timed out
+ 2021-07-30 02:44:42,596 INFO service timed out
+ 2021-07-30 02:44:47,807 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 02:44:48,865 INFO service timed out
+ 2021-07-30 02:44:53,271 INFO service timed out
+ 2021-07-30 02:44:54,869 INFO service Список клиентов: {'Groofi': <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39756)>, 'Alina': <socket.socket fd=22, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39758)>, 'П': <socket.socket fd=25, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40006)>}
+ 2021-07-30 02:44:54,878 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 02:44:54,896 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 02:44:55,895 INFO service timed out
+ 2021-07-30 02:44:56,897 INFO service timed out
+ 2021-07-30 02:44:57,839 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 02:44:57,859 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 02:44:57,871 INFO service Class '<class 'storage_sqlite.List_Contact'>' already has a primary mapper defined. 
+ 2021-07-30 02:44:58,878 INFO service timed out
+ 2021-07-30 02:45:01,106 INFO service timed out
+ 2021-07-30 02:45:04,992 INFO service timed out
+ 2021-07-30 02:45:10,716 INFO service timed out
+ 2021-07-30 02:45:55,476 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140527805716224 and this is thread id 140528315639616.
+ 2021-07-30 02:45:55,477 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fcf46b27e40>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140527805716224 and this is thread id 140528315639616.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140527805716224 and this is thread id 140528315639616.
+ 2021-07-30 02:45:55,478 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140527805716224 and this is thread id 140528315639616.
+ 2021-07-30 02:45:55,478 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fcf45e5f030>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140527805716224 and this is thread id 140528315639616.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140527805716224 and this is thread id 140528315639616.
+ 2021-07-30 02:45:55,478 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140527805716224 and this is thread id 140528315639616.
+ 2021-07-30 02:45:55,478 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fcf45aa58a0>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140527805716224 and this is thread id 140528315639616.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140527805716224 and this is thread id 140528315639616.
+ 2021-07-30 02:46:09,928 INFO service 
+ 2021-07-30 02:46:09,933 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 02:46:10,932 INFO service timed out
+ 2021-07-30 02:46:13,227 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 02:46:14,285 INFO service timed out
+ 2021-07-30 02:46:15,378 INFO service Список клиентов: {'Groofi': <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777)>, 'Alina': <socket.socket fd=22, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39758)>, 'П': <socket.socket fd=25, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40006)>, 'Milk': <socket.socket fd=26, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40008)>}
+ 2021-07-30 02:46:21,281 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 02:46:21,316 INFO service [Errno 32] Обрыв канала
+ 2021-07-30 02:46:21,317 INFO service Сообщение испорчено, попробуйте отослать ещё раз! 
+ 2021-07-30 02:46:21,322 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 02:46:22,319 INFO service timed out
+ 2021-07-30 02:47:43,990 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140459343525632 and this is thread id 140459784771392.
+ 2021-07-30 02:47:43,991 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fbf51f06e40>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140459343525632 and this is thread id 140459784771392.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140459343525632 and this is thread id 140459784771392.
+ 2021-07-30 02:47:43,992 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140459343525632 and this is thread id 140459784771392.
+ 2021-07-30 02:47:43,992 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fbf5123d030>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140459343525632 and this is thread id 140459784771392.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140459343525632 and this is thread id 140459784771392.
+ 2021-07-30 02:47:50,262 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014868674304 and this is thread id 140015176124224.
+ 2021-07-30 02:47:50,262 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f57cc69a6c0>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014868674304 and this is thread id 140015176124224.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014868674304 and this is thread id 140015176124224.
+ 2021-07-30 02:47:50,262 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014563964672 and this is thread id 140015176124224.
+ 2021-07-30 02:47:50,263 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f57cd38b210>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014563964672 and this is thread id 140015176124224.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014563964672 and this is thread id 140015176124224.
+ 2021-07-30 02:47:50,263 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014590191360 and this is thread id 140015176124224.
+ 2021-07-30 02:47:50,263 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f57cd27a210>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014590191360 and this is thread id 140015176124224.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014590191360 and this is thread id 140015176124224.
+ 2021-07-30 02:47:50,263 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014590191360 and this is thread id 140015176124224.
+ 2021-07-30 02:47:50,264 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f57cd27a300>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014590191360 and this is thread id 140015176124224.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014590191360 and this is thread id 140015176124224.
+ 2021-07-30 02:47:50,264 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014868674304 and this is thread id 140015176124224.
+ 2021-07-30 02:47:50,264 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f57cd27a120>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014868674304 and this is thread id 140015176124224.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014868674304 and this is thread id 140015176124224.
+ 2021-07-30 02:47:50,264 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014563964672 and this is thread id 140015176124224.
+ 2021-07-30 02:47:50,264 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f57cd27a030>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014563964672 and this is thread id 140015176124224.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140014563964672 and this is thread id 140015176124224.
+ 2021-07-30 02:52:02,193 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 02:52:03,201 INFO service timed out
+ 2021-07-30 02:54:31,013 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 02:54:32,022 INFO service timed out
+ 2021-07-30 02:57:59,770 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 02:58:00,778 INFO service timed out
+ 2021-07-30 02:58:18,620 INFO service 
+ 2021-07-30 02:58:19,905 INFO service 
+ 2021-07-30 02:58:19,931 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 02:58:20,900 INFO service timed out
+ 2021-07-30 02:58:58,835 INFO service 
+ 2021-07-30 02:58:58,856 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 02:58:59,850 INFO service timed out
+ 2021-07-30 03:02:55,865 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 03:02:56,874 INFO service timed out
+ 2021-07-30 03:05:12,993 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 03:05:14,002 INFO service timed out
+ 2021-07-30 03:05:17,948 INFO service 
+ 2021-07-30 03:05:17,966 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:05:18,960 INFO service timed out
+ 2021-07-30 03:05:21,580 INFO service 
+ 2021-07-30 03:05:21,602 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:05:22,590 INFO service timed out
+ 2021-07-30 03:05:38,477 INFO service 
+ 2021-07-30 03:05:38,483 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:05:39,481 INFO service timed out
+ 2021-07-30 03:05:41,222 INFO service 
+ 2021-07-30 03:05:41,229 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:05:42,227 INFO service timed out
+ 2021-07-30 03:05:43,521 INFO service 
+ 2021-07-30 03:05:43,527 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:05:44,526 INFO service timed out
+ 2021-07-30 03:08:52,999 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 03:08:54,009 INFO service timed out
+ 2021-07-30 03:08:57,261 INFO service 
+ 2021-07-30 03:08:57,267 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:08:58,265 INFO service timed out
+ 2021-07-30 03:09:00,624 INFO service 
+ 2021-07-30 03:09:00,632 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:09:01,629 INFO service timed out
+ 2021-07-30 03:09:06,639 INFO service timed out
+ 2021-07-30 03:09:24,786 INFO service timed out
+ 2021-07-30 03:09:26,804 INFO service timed out
+ 2021-07-30 03:12:43,918 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 03:12:43,942 INFO service 
+ 2021-07-30 03:12:43,948 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:12:43,954 INFO service 
+ 2021-07-30 03:12:43,958 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:12:44,930 INFO service timed out
+ 2021-07-30 03:12:44,946 INFO service timed out
+ 2021-07-30 03:12:44,957 INFO service timed out
+ 2021-07-30 03:13:32,592 INFO service 
+ 2021-07-30 03:13:32,596 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:13:33,596 INFO service timed out
+ 2021-07-30 03:14:45,598 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 03:14:46,613 INFO service timed out
+ 2021-07-30 03:14:48,761 INFO service 
+ 2021-07-30 03:14:48,765 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:14:49,764 INFO service timed out
+ 2021-07-30 03:14:51,060 INFO service 
+ 2021-07-30 03:14:51,066 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:14:52,064 INFO service timed out
+ 2021-07-30 03:16:52,104 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 03:16:52,954 INFO service 
+ 2021-07-30 03:16:52,960 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:16:52,974 INFO service 
+ 2021-07-30 03:16:52,980 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:16:53,110 INFO service timed out
+ 2021-07-30 03:16:53,958 INFO service timed out
+ 2021-07-30 03:16:53,978 INFO service timed out
+ 2021-07-30 03:17:04,236 INFO service 
+ 2021-07-30 03:17:04,240 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:17:05,238 INFO service timed out
+ 2021-07-30 03:17:10,532 INFO service 
+ 2021-07-30 03:17:10,538 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:17:11,537 INFO service timed out
+ 2021-07-30 03:17:15,395 INFO service 
+ 2021-07-30 03:17:15,401 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:17:16,405 INFO service timed out
+ 2021-07-30 03:19:38,626 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 03:19:38,652 INFO service 
+ 2021-07-30 03:19:38,658 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:19:38,664 INFO service 
+ 2021-07-30 03:19:38,670 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:19:39,634 INFO service timed out
+ 2021-07-30 03:19:39,657 INFO service timed out
+ 2021-07-30 03:19:39,668 INFO service timed out
+ 2021-07-30 03:21:04,411 INFO service 
+ 2021-07-30 03:21:04,416 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:21:05,414 INFO service timed out
+ 2021-07-30 03:21:06,993 INFO service timed out
+ 2021-07-30 03:21:10,746 INFO service timed out
+ 2021-07-30 03:21:13,815 INFO service Список клиентов: {'': <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40328)>}
+ 2021-07-30 03:21:15,720 INFO service {'': ''}
+ 2021-07-30 03:21:16,721 INFO service timed out
+ 2021-07-30 03:21:22,255 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139663225079552 and this is thread id 139663253698368.
+ 2021-07-30 03:21:22,256 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f05e14263f0>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139663225079552 and this is thread id 139663253698368.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139663225079552 and this is thread id 139663253698368.
+ 2021-07-30 03:21:22,259 INFO service 
+ 2021-07-30 03:21:22,264 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:21:23,262 INFO service timed out
+ 2021-07-30 03:21:26,035 INFO service Список клиентов: {'': <socket.socket fd=12, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40330)>}
+ 2021-07-30 03:21:27,633 INFO service {'': ''}
+ 2021-07-30 03:21:27,635 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 03:21:28,635 INFO service timed out
+ 2021-07-30 03:21:30,702 INFO service timed out
+ 2021-07-30 03:21:32,060 INFO service timed out
+ 2021-07-30 03:21:37,010 INFO service timed out
+ 2021-07-30 03:21:38,029 INFO service timed out
+ 2021-07-30 03:21:39,031 INFO service timed out
+ 2021-07-30 03:21:43,571 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139663108978432 and this is thread id 139663253698368.
+ 2021-07-30 03:21:43,571 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f05e11354e0>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139663108978432 and this is thread id 139663253698368.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139663108978432 and this is thread id 139663253698368.
+ 2021-07-30 03:21:43,573 INFO service 
+ 2021-07-30 03:21:43,579 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:21:44,577 INFO service timed out
+ 2021-07-30 03:21:52,451 INFO service timed out
+ 2021-07-30 03:21:53,478 INFO service timed out
+ 2021-07-30 03:21:57,557 INFO service Список клиентов: {'': <socket.socket fd=14, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777)>}
+ 2021-07-30 03:21:59,553 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:21:59,559 INFO service Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+ 2021-07-30 03:22:00,565 INFO service timed out
+ 2021-07-30 03:22:01,567 INFO service timed out
+ 2021-07-30 03:22:04,086 INFO service timed out
+ 2021-07-30 03:22:04,932 INFO service string index out of range
+ 2021-07-30 03:22:04,932 INFO service Сообщение испорчено, попробуйте отослать ещё раз! 
+ 2021-07-30 03:23:31,409 INFO service 
+ 2021-07-30 03:23:31,416 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:23:32,414 INFO service timed out
+ 2021-07-30 03:23:34,778 INFO service timed out
+ 2021-07-30 03:23:37,748 INFO service Список клиентов: {'': <socket.socket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40336)>}
+ 2021-07-30 03:23:38,917 INFO service {'': ''}
+ 2021-07-30 03:23:38,920 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 03:23:39,918 INFO service timed out
+ 2021-07-30 03:23:41,422 INFO service timed out
+ 2021-07-30 03:23:42,424 INFO service timed out
+ 2021-07-30 03:23:43,426 INFO service timed out
+ 2021-07-30 03:23:44,427 INFO service timed out
+ 2021-07-30 03:23:46,931 INFO service timed out
+ 2021-07-30 03:23:50,893 INFO service Список клиентов: {'': <socket.socket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40336)>}
+ 2021-07-30 03:23:52,689 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:23:52,695 INFO service Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+ 2021-07-30 03:23:52,700 INFO service {'': ''}
+ 2021-07-30 03:23:52,703 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 03:23:53,702 INFO service timed out
+ 2021-07-30 03:23:58,796 INFO service Список клиентов: {'': <socket.socket fd=16, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777)>}
+ 2021-07-30 03:24:00,187 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:24:00,193 INFO service Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+ 2021-07-30 03:24:00,206 INFO service [Errno 32] Broken pipe
+ 2021-07-30 03:24:00,206 INFO service Сообщение испорчено, попробуйте отослать ещё раз! 
+ 2021-07-30 03:24:01,207 INFO service timed out
+ 2021-07-30 03:24:02,209 INFO service timed out
+ 2021-07-30 03:26:04,046 INFO service 
+ 2021-07-30 03:26:04,050 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/event/base.py", line 89, in __init__
+    self._empty_listeners = self._empty_listener_reg[instance_cls]
+  File "/usr/lib/python3.8/weakref.py", line 383, in __getitem__
+    return self.data[ref(key)]
+KeyError: <weakref at 0x7f05e062a450; to 'type' at 0x29ebbb0 (Session)>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139663125763840 and this is thread id 139663253698368.
+ 2021-07-30 03:26:04,051 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f05e11357b0>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/event/base.py", line 89, in __init__
+    self._empty_listeners = self._empty_listener_reg[instance_cls]
+  File "/usr/lib/python3.8/weakref.py", line 383, in __getitem__
+    return self.data[ref(key)]
+KeyError: <weakref at 0x7f05e062a450; to 'type' at 0x29ebbb0 (Session)>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139663125763840 and this is thread id 139663253698368.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139663125763840 and this is thread id 139663253698368.
+ 2021-07-30 03:26:04,056 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:26:05,055 INFO service timed out
+ 2021-07-30 03:26:08,781 INFO service 
+ 2021-07-30 03:26:08,788 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:26:09,786 INFO service timed out
+ 2021-07-30 03:26:14,175 INFO service Список клиентов: {'': <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40340)>}
+ 2021-07-30 03:26:15,553 INFO service {'': ''}
+ 2021-07-30 03:26:15,556 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 03:26:16,554 INFO service timed out
+ 2021-07-30 03:26:20,948 INFO service Список клиентов: {'': <socket.socket fd=13, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777)>}
+ 2021-07-30 03:26:23,766 INFO service timed out
+ 2021-07-30 03:26:24,768 INFO service timed out
+ 2021-07-30 03:26:25,741 INFO service string index out of range
+ 2021-07-30 03:26:25,741 INFO service Сообщение испорчено, попробуйте отослать ещё раз! 
+ 2021-07-30 03:28:00,348 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139663225079552 and this is thread id 139663253698368.
+ 2021-07-30 03:28:00,349 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f05e11357b0>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139663225079552 and this is thread id 139663253698368.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139663225079552 and this is thread id 139663253698368.
+ 2021-07-30 03:28:00,349 INFO service 
+ 2021-07-30 03:28:00,355 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:28:01,354 INFO service timed out
+ 2021-07-30 03:28:05,086 INFO service 
+ 2021-07-30 03:28:05,092 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:28:06,090 INFO service timed out
+ 2021-07-30 03:28:11,556 INFO service Список клиентов: {'': <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40346)>}
+ 2021-07-30 03:28:13,802 INFO service timed out
+ 2021-07-30 03:28:14,802 INFO service timed out
+ 2021-07-30 03:29:23,505 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 03:29:24,510 INFO service timed out
+ 2021-07-30 03:29:30,260 INFO service Список клиентов: {'': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 8888), raddr=('127.0.0.1', 44054)>}
+ 2021-07-30 03:29:31,539 INFO service {'': ''}
+ 2021-07-30 03:29:32,540 INFO service timed out
+ 2021-07-30 03:29:52,405 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139670661519104 and this is thread id 139670690137920.
+ 2021-07-30 03:29:52,406 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f079c98c7b0>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139670661519104 and this is thread id 139670690137920.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139670661519104 and this is thread id 139670690137920.
+ 2021-07-30 03:30:04,921 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 03:30:05,926 INFO service timed out
+ 2021-07-30 03:30:09,847 INFO service Список клиентов: {'': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40356)>}
+ 2021-07-30 03:30:10,868 INFO service {'': ''}
+ 2021-07-30 03:30:11,869 INFO service timed out
+ 2021-07-30 03:30:16,420 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140359405909760 and this is thread id 140359434528576.
+ 2021-07-30 03:30:16,421 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fa7f8f627b0>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140359405909760 and this is thread id 140359434528576.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140359405909760 and this is thread id 140359434528576.
+ 2021-07-30 03:30:16,478 INFO service 
+ 2021-07-30 03:30:16,495 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:30:17,489 INFO service timed out
+ 2021-07-30 03:30:18,974 INFO service Список клиентов: {'': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40358)>}
+ 2021-07-30 03:30:20,244 INFO service {'': ''}
+ 2021-07-30 03:30:20,246 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140359434528576 and this is thread id 140359321249536.
+ 2021-07-30 03:30:20,246 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fa7f8df4300>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140359434528576 and this is thread id 140359321249536.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140359434528576 and this is thread id 140359321249536.
+ 2021-07-30 03:30:20,246 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140359434528576 and this is thread id 140359321249536.
+ 2021-07-30 03:30:20,246 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fa7f8f627b0>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140359434528576 and this is thread id 140359321249536.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140359434528576 and this is thread id 140359321249536.
+ 2021-07-30 03:30:20,247 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 03:30:21,245 INFO service timed out
+ 2021-07-30 03:30:23,975 INFO service Список клиентов: {'': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40358)>}
+ 2021-07-30 03:30:24,943 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:30:24,949 INFO service Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+ 2021-07-30 03:30:25,962 INFO service timed out
+ 2021-07-30 03:30:26,963 INFO service timed out
+ 2021-07-30 03:30:29,952 INFO service timed out
+ 2021-07-30 03:30:32,695 INFO service Список клиентов: {'': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40358)>}
+ 2021-07-30 03:30:33,647 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:30:33,653 INFO service Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+ 2021-07-30 03:30:34,705 INFO service timed out
+ 2021-07-30 03:30:35,706 INFO service timed out
+ 2021-07-30 03:30:46,105 INFO service timed out
+ 2021-07-30 03:30:47,881 INFO service Список клиентов: {'': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777)>}
+ 2021-07-30 03:30:49,226 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:30:49,232 INFO service Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+ 2021-07-30 03:30:50,291 INFO service timed out
+ 2021-07-30 03:30:51,293 INFO service timed out
+ 2021-07-30 03:30:52,968 INFO service Список клиентов: {'': <socket.socket fd=8, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777)>}
+ 2021-07-30 03:30:54,720 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:30:54,726 INFO service Class '<class 'storage_sqlite.History_Message'>' already has a primary mapper defined. 
+ 2021-07-30 03:30:54,731 INFO service [Errno 32] Broken pipe
+ 2021-07-30 03:30:54,731 INFO service Сообщение испорчено, попробуйте отослать ещё раз! 
+ 2021-07-30 03:30:55,733 INFO service timed out
+ 2021-07-30 03:30:55,973 INFO service string index out of range
+ 2021-07-30 03:30:55,973 INFO service Сообщение испорчено, попробуйте отослать ещё раз! 
+ 2021-07-30 03:30:59,414 INFO service timed out
+ 2021-07-30 03:39:02,651 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 03:39:09,720 INFO service timed out
+ 2021-07-30 03:39:12,215 INFO service timed out
+ 2021-07-30 03:39:14,401 INFO service timed out
+ 2021-07-30 03:40:17,082 INFO service 
+ 2021-07-30 03:40:23,387 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:40:24,386 INFO service timed out
+ 2021-07-30 03:40:25,500 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 03:40:26,576 INFO service timed out
+ 2021-07-30 03:40:28,349 INFO service timed out
+ 2021-07-30 03:44:35,408 INFO service 
+ 2021-07-30 03:44:40,158 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:44:41,158 INFO service timed out
+ 2021-07-30 03:44:42,403 INFO service timed out
+ 2021-07-30 03:46:12,080 INFO service 
+ 2021-07-30 03:46:12,093 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140377125041920 and this is thread id 140377135822592.
+ 2021-07-30 03:46:12,095 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fac22fd1990>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140377125041920 and this is thread id 140377135822592.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140377125041920 and this is thread id 140377135822592.
+ 2021-07-30 03:46:12,096 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140376871474944 and this is thread id 140377135822592.
+ 2021-07-30 03:46:12,096 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fac22fd1d50>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140376871474944 and this is thread id 140377135822592.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140376871474944 and this is thread id 140377135822592.
+ 2021-07-30 03:46:15,342 INFO service 
+ 2021-07-30 03:46:15,391 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:46:16,365 INFO service timed out
+ 2021-07-30 03:46:45,595 INFO service 
+ 2021-07-30 03:46:49,392 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:46:50,392 INFO service timed out
+ 2021-07-30 03:46:51,683 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 03:46:52,745 INFO service timed out
+ 2021-07-30 03:46:53,227 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140641589786368 and this is thread id 140642100197184.
+ 2021-07-30 03:46:53,227 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fe9c4caab70>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140641589786368 and this is thread id 140642100197184.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140641589786368 and this is thread id 140642100197184.
+ 2021-07-30 03:46:53,986 INFO service timed out
+ 2021-07-30 03:47:02,413 INFO service timed out
+ 2021-07-30 03:47:04,154 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 03:47:04,171 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:47:04,186 INFO service Class '<class 'storage_sqlite.List_Contact'>' already has a primary mapper defined. 
+ 2021-07-30 03:47:05,204 INFO service timed out
+ 2021-07-30 03:47:06,023 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 03:47:06,037 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:47:06,053 INFO service Class '<class 'storage_sqlite.List_Contact'>' already has a primary mapper defined. 
+ 2021-07-30 03:47:07,064 INFO service timed out
+ 2021-07-30 03:47:13,886 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 03:47:13,901 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:47:13,917 INFO service Class '<class 'storage_sqlite.List_Contact'>' already has a primary mapper defined. 
+ 2021-07-30 03:47:14,935 INFO service timed out
+ 2021-07-30 03:47:25,079 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140641589786368 and this is thread id 140642100197184.
+ 2021-07-30 03:47:25,080 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fe9ab1805d0>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140641589786368 and this is thread id 140642100197184.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140641589786368 and this is thread id 140642100197184.
+ 2021-07-30 03:47:25,080 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140641589786368 and this is thread id 140642100197184.
+ 2021-07-30 03:47:25,080 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fe9ab1806c0>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140641589786368 and this is thread id 140642100197184.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140641589786368 and this is thread id 140642100197184.
+ 2021-07-30 03:47:25,081 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140641589786368 and this is thread id 140642100197184.
+ 2021-07-30 03:47:25,081 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fe9ab1807b0>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140641589786368 and this is thread id 140642100197184.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140641589786368 and this is thread id 140642100197184.
+ 2021-07-30 03:47:59,468 INFO service 
+ 2021-07-30 03:48:06,439 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:48:07,438 INFO service timed out
+ 2021-07-30 03:48:08,420 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 03:48:09,494 INFO service timed out
+ 2021-07-30 03:48:11,125 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140044742293248 and this is thread id 140045016762176.
+ 2021-07-30 03:48:11,126 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f5ebfd6eb70>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140044742293248 and this is thread id 140045016762176.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140044742293248 and this is thread id 140045016762176.
+ 2021-07-30 03:48:11,884 INFO service timed out
+ 2021-07-30 03:48:59,650 INFO service 
+ 2021-07-30 03:49:02,634 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:49:02,636 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140377135822592 and this is thread id 140376509773568.
+ 2021-07-30 03:49:02,637 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fac2338e210>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140377135822592 and this is thread id 140376509773568.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140377135822592 and this is thread id 140376509773568.
+ 2021-07-30 03:49:02,637 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140376854689536 and this is thread id 140376509773568.
+ 2021-07-30 03:49:02,637 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fac22fd1d50>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140376854689536 and this is thread id 140376509773568.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140376854689536 and this is thread id 140376509773568.
+ 2021-07-30 03:49:03,634 INFO service timed out
+ 2021-07-30 03:49:08,450 INFO service Список клиентов: {'Alina': <socket.socket fd=31, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7778), raddr=('127.0.0.1', 58406)>}
+ 2021-07-30 03:49:47,544 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140422836942592 and this is thread id 140423277045568.
+ 2021-07-30 03:49:47,545 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fb6d1e8cb70>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140422836942592 and this is thread id 140423277045568.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140422836942592 and this is thread id 140423277045568.
+ 2021-07-30 03:49:50,932 INFO service 'А'
+ 2021-07-30 03:49:50,932 INFO service Сообщение испорчено, попробуйте отослать ещё раз! 
+ 2021-07-30 03:49:50,944 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139961874548480 and this is thread id 139962384865088.
+ 2021-07-30 03:49:50,945 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f4b82983b70>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139961874548480 and this is thread id 139962384865088.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139961874548480 and this is thread id 139962384865088.
+ 2021-07-30 03:50:07,139 INFO service 
+ 2021-07-30 03:50:10,334 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:50:11,334 INFO service timed out
+ 2021-07-30 03:50:12,224 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 03:50:13,290 INFO service timed out
+ 2021-07-30 03:50:15,648 INFO service timed out
+ 2021-07-30 03:50:18,161 INFO service timed out
+ 2021-07-30 03:50:19,527 INFO service Class '<class 'storage_sqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-07-30 03:50:19,542 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:50:19,558 INFO service Class '<class 'storage_sqlite.List_Contact'>' already has a primary mapper defined. 
+ 2021-07-30 03:50:20,576 INFO service timed out
+ 2021-07-30 03:50:26,510 INFO service Список клиентов: {'Groofi': <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777)>, 'Alina': <socket.socket fd=25, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777)>, 'ррапрапр': <socket.socket fd=24, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40408)>}
+ 2021-07-30 03:50:45,248 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:50:45,265 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139636716680960 and this is thread id 139636991149888.
+ 2021-07-30 03:50:45,266 ERROR base Exception closing connection <sqlite3.Connection object at 0x7effbf9e2b70>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139636716680960 and this is thread id 139636991149888.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139636716680960 and this is thread id 139636991149888.
+ 2021-07-30 03:50:45,266 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139636716680960 and this is thread id 139636991149888.
+ 2021-07-30 03:50:45,266 ERROR base Exception closing connection <sqlite3.Connection object at 0x7effbed84e40>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139636716680960 and this is thread id 139636991149888.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139636716680960 and this is thread id 139636991149888.
+ 2021-07-30 03:50:52,964 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140377135822592 and this is thread id 140377409898304.
+ 2021-07-30 03:50:52,965 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fac18244210>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140377135822592 and this is thread id 140377409898304.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140377135822592 and this is thread id 140377409898304.
+ 2021-07-30 03:50:52,965 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140376509773568 and this is thread id 140377409898304.
+ 2021-07-30 03:50:52,965 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fac22fd1a80>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140376509773568 and this is thread id 140377409898304.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140376509773568 and this is thread id 140377409898304.
+ 2021-07-30 03:50:52,966 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140376854689536 and this is thread id 140377409898304.
+ 2021-07-30 03:50:52,966 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fac2338e210>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140376854689536 and this is thread id 140377409898304.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140376854689536 and this is thread id 140377409898304.
+ 2021-07-30 03:50:52,966 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140377135822592 and this is thread id 140377409898304.
+ 2021-07-30 03:50:52,966 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fac22fd1d50>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140377135822592 and this is thread id 140377409898304.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140377135822592 and this is thread id 140377409898304.
+ 2021-07-30 03:51:08,606 INFO service Class '<class 'storage_sqlite.User'>' already has a primary mapper defined. 
+ 2021-07-30 03:51:14,070 INFO service timed out
+ 2021-07-30 03:51:16,901 INFO service timed out
+ 2021-07-30 03:51:18,433 INFO service timed out
+ 2021-07-30 03:51:25,093 INFO service Список клиентов: {'Alina': <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40410)>}
+ 2021-07-30 03:51:28,577 INFO service Class '<class 'storage_sqlite.History'>' already has a primary mapper defined. 
+ 2021-07-30 03:51:28,660 INFO service 'Groofi'
+ 2021-07-30 03:51:28,660 INFO service Сообщение испорчено, попробуйте отослать ещё раз! 
+ 2021-07-30 03:51:29,663 INFO service timed out
+ 2021-08-02 19:19:19,545 INFO service Class '<class 'storagesqlite.User'>' already has a primary mapper defined. 
+ 2021-08-02 19:19:23,928 INFO service timed out
+ 2021-08-02 19:19:26,993 INFO service Список клиентов: {'Groofi': <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 48152)>}
+ 2021-08-02 19:19:34,361 INFO service {'Groofi': 'Groofi'}
+ 2021-08-02 19:19:35,363 INFO service timed out
+ 2021-08-02 19:19:36,553 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-02 19:19:36,577 INFO service Class '<class 'storagesqlite.History'>' already has a primary mapper defined. 
+ 2021-08-02 19:19:37,606 INFO service timed out
+ 2021-08-02 19:19:39,245 INFO service timed out
+ 2021-08-02 19:19:46,327 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140064319338240 and this is thread id 140064769144640.
+ 2021-08-02 19:19:46,330 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f63592e1b70>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140064319338240 and this is thread id 140064769144640.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140064319338240 and this is thread id 140064769144640.
+ 2021-08-02 19:19:46,330 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140064319338240 and this is thread id 140064769144640.
+ 2021-08-02 19:19:46,331 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f6358697e40>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140064319338240 and this is thread id 140064769144640.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140064319338240 and this is thread id 140064769144640.
+ 2021-08-02 19:19:47,894 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140191973820160 and this is thread id 140192247895872.
+ 2021-08-02 19:19:47,895 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f8106a2c990>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140191973820160 and this is thread id 140192247895872.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140191973820160 and this is thread id 140192247895872.
+ 2021-08-02 19:19:47,896 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140191726511872 and this is thread id 140192247895872.
+ 2021-08-02 19:19:47,896 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f810671e990>
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+    fairy._reset(pool)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 887, in _reset
+    pool._dialect.do_rollback(self)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 667, in do_rollback
+    dbapi_connection.rollback()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140191726511872 and this is thread id 140192247895872.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/pool/base.py", line 244, in _close_connection
+    self._dialect.do_close(connection)
+  File "/home/groofi/.local/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 673, in do_close
+    dbapi_connection.close()
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140191726511872 and this is thread id 140192247895872.
+ 2021-08-02 19:28:25,027 INFO service Сообщение от клиента: модуль ujdyj отработал
+ 2021-08-06 02:01:24,937 INFO service Class '<class 'storagesqlite.User'>' already has a primary mapper defined. 
+ 2021-08-06 02:01:28,272 INFO service 
+ 2021-08-06 02:01:40,936 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548521363200 and this is thread id 140548442683136.
+ 2021-08-06 02:01:40,936 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fd4145f9e40>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548521363200 and this is thread id 140548442683136.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548521363200 and this is thread id 140548442683136.
+ 2021-08-06 02:04:14,639 INFO service 
+ 2021-08-06 02:04:15,599 INFO service 
+ 2021-08-06 02:04:15,620 INFO service Class '<class 'storagesqlite.History'>' already has a primary mapper defined. 
+ 2021-08-06 02:04:27,703 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 02:04:54,913 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 02:04:58,321 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 02:05:08,340 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 02:05:30,020 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 02:05:38,782 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 02:05:42,009 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 02:05:59,165 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548521363200 and this is thread id 140548425897728.
+ 2021-08-06 02:05:59,166 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fd4145f9e40>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548521363200 and this is thread id 140548425897728.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548521363200 and this is thread id 140548425897728.
+ 2021-08-06 02:05:59,166 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548442683136 and this is thread id 140548425897728.
+ 2021-08-06 02:05:59,166 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fd4000de120>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548442683136 and this is thread id 140548425897728.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548442683136 and this is thread id 140548425897728.
+ 2021-08-06 02:05:59,166 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548442683136 and this is thread id 140548425897728.
+ 2021-08-06 02:05:59,166 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fd4000de300>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548442683136 and this is thread id 140548425897728.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548442683136 and this is thread id 140548425897728.
+ 2021-08-06 02:05:59,168 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 02:06:09,441 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 02:06:25,292 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548425897728 and this is thread id 140548967975808.
+ 2021-08-06 02:06:25,293 ERROR base Exception closing connection <sqlite3.Connection object at 0x7fd4145f9e40>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548425897728 and this is thread id 140548967975808.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140548425897728 and this is thread id 140548967975808.
+ 2021-08-06 21:26:24,704 INFO service Class '<class 'storagesqlite.User'>' already has a primary mapper defined. 
+ 2021-08-06 21:26:45,630 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139801078662912 and this is thread id 139801068005120.
+ 2021-08-06 21:26:45,630 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f260d50ee40>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139801078662912 and this is thread id 139801068005120.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139801078662912 and this is thread id 139801068005120.
+ 2021-08-06 21:26:53,236 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 21:28:04,153 INFO service 
+ 2021-08-06 21:28:07,731 INFO service 
+ 2021-08-06 21:28:07,739 INFO service Class '<class 'storagesqlite.History'>' already has a primary mapper defined. 
+ 2021-08-06 21:28:37,288 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 21:28:46,788 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 21:28:50,320 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 21:33:15,342 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139801068005120 and this is thread id 139801525263232.
+ 2021-08-06 21:33:15,342 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f260d50ee40>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139801068005120 and this is thread id 139801525263232.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139801068005120 and this is thread id 139801525263232.
+ 2021-08-06 21:33:15,343 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139801078662912 and this is thread id 139801525263232.
+ 2021-08-06 21:33:15,343 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f260d5de6c0>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139801078662912 and this is thread id 139801525263232.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139801078662912 and this is thread id 139801525263232.
+ 2021-08-06 21:33:15,343 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139800908654336 and this is thread id 139801525263232.
+ 2021-08-06 21:33:15,343 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f25f87d6120>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139800908654336 and this is thread id 139801525263232.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139800908654336 and this is thread id 139801525263232.
+ 2021-08-06 21:33:15,343 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139800917047040 and this is thread id 139801525263232.
+ 2021-08-06 21:33:15,344 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f25f87d6210>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139800917047040 and this is thread id 139801525263232.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 139800917047040 and this is thread id 139801525263232.
+ 2021-08-06 21:36:29,927 INFO service Class '<class 'storagesqlite.User'>' already has a primary mapper defined. 
+ 2021-08-06 21:36:46,115 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140123056555776 and this is thread id 140122972485376.
+ 2021-08-06 21:36:46,116 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f7104bdce40>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140123056555776 and this is thread id 140122972485376.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140123056555776 and this is thread id 140122972485376.
+ 2021-08-06 21:36:58,428 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 21:37:26,311 INFO service 
+ 2021-08-06 21:37:28,532 INFO service 
+ 2021-08-06 21:37:28,563 INFO service Class '<class 'storagesqlite.History'>' already has a primary mapper defined. 
+ 2021-08-06 21:37:34,914 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 21:38:00,087 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 21:38:10,209 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 21:38:25,813 INFO service Class '<class 'storagesqlite.Contacts'>' already has a primary mapper defined. 
+ 2021-08-06 21:38:47,712 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140122955699968 and this is thread id 140123503950720.
+ 2021-08-06 21:38:47,713 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f70f06a3300>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140122955699968 and this is thread id 140123503950720.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140122955699968 and this is thread id 140123503950720.
+ 2021-08-06 21:38:47,715 INFO service 
+ 2021-08-06 21:39:00,946 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140122972485376 and this is thread id 140123503950720.
+ 2021-08-06 21:39:00,947 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f7104bdce40>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140122972485376 and this is thread id 140123503950720.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140122972485376 and this is thread id 140123503950720.
+ 2021-08-06 21:39:00,949 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140123056555776 and this is thread id 140123503950720.
+ 2021-08-06 21:39:00,950 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f7104cb16c0>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140123056555776 and this is thread id 140123503950720.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140123056555776 and this is thread id 140123503950720.
+ 2021-08-06 21:39:00,951 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140122955699968 and this is thread id 140123503950720.
+ 2021-08-06 21:39:00,951 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f70f06a3120>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140122955699968 and this is thread id 140123503950720.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140122955699968 and this is thread id 140123503950720.
+ 2021-08-06 21:39:00,952 ERROR base Exception during reset or similar
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140122955699968 and this is thread id 140123503950720.
+ 2021-08-06 21:39:00,952 ERROR base Exception closing connection <sqlite3.Connection object at 0x7f70f06a3210>
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 682, in _finalize_fairy
+  File "sqlalchemy/pool/base.py", line 887, in _reset
+  File "sqlalchemy/engine/default.py", line 667, in do_rollback
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140122955699968 and this is thread id 140123503950720.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "sqlalchemy/pool/base.py", line 244, in _close_connection
+  File "sqlalchemy/engine/default.py", line 673, in do_close
+sqlite3.ProgrammingError: SQLite objects created in a thread can only be used in that same thread. The object was created in thread id 140122955699968 and this is thread id 140123503950720.
+ 2021-08-06 21:39:00,955 INFO service 
+ 2021-08-06 21:39:05,799 INFO service Class '<class 'storagesqlite.History_Message'>' already has a primary mapper defined. 
