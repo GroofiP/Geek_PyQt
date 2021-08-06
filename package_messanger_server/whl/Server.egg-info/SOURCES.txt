@@ -1,0 +1,12 @@
+formserver.py
+setup.py
+Server.egg-info/PKG-INFO
+Server.egg-info/SOURCES.txt
+Server.egg-info/dependency_links.txt
+Server.egg-info/requires.txt
+Server.egg-info/top_level.txt
+src/servercls.py
+src/service.py
+src/storagesqlite.py
+src/log/clientlogconfig.py
+src/log/serverlogconfig.py

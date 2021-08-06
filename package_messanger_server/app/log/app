@@ -1,0 +1,8 @@
+timed out
+Список клиентов: {'Groofi': <socket.socket fd=20, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 48152)>}
+{'Groofi': 'Groofi'}
+timed out
+Class '<class 'storagesqlite.History'>' already has a primary mapper defined. 
+timed out
+timed out
+Сообщение от клиента: модуль ujdyj отработал
