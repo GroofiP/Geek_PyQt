@@ -13,7 +13,7 @@ from threading import Thread
 
 from sqlalchemy.exc import IntegrityError
 
-from storage_sqlite import Storage, PATH, User, Contacts
+from storagesqlite import Storage, PATH, User, Contacts
 from service import log_send
 
 
@@ -28,19 +28,21 @@ class PortVerifier:
 
 
 class ServerVerifier(type):
-
     def __init__(cls, name_class, bases, dict_class):
         n = 0
         for key, value in dict_class.items():
             if key != "tcp":
                 a = dis.code_info(value)
                 if "connect" in a:
-                    raise Exception("Такого метода как 'connect' не должно быть в классе")
+                    raise Exception(
+                        "Такого метода как 'connect' не должно быть в классе"
+                    )
                 elif "SOCK_STREAM" in a:
                     n += 1
         if n == 0:
             raise Exception(
-                "Такая функция у сокета,как 'SOCK_STREAM' должна быть в классе, так как соединение должно быть TCP")
+                "Такая функция у сокета,как 'SOCK_STREAM' должна быть в классе, так как соединение должно быть TCP"
+            )
         type.__init__(cls, name_class, bases, dict_class)
 
 
@@ -64,21 +66,20 @@ class Server(metaclass=ServerVerifier):
 
     @staticmethod
     def random_char(y):
-        return ''.join(random.choice(string.ascii_letters) for x in range(y))
+        return "".join(random.choice(string.ascii_letters) for x in range(y))
 
     @staticmethod
     def save_json(auth, salt):
         try:
-            with open("password_salt.json", "r") as file_a:
+            with open("salt.json", "r") as file_a:
                 file_content = file_a.read()
                 templates = json.loads(file_content)
-            with open("password_salt.json", "w") as file_a:
+            with open("salt.json", "w") as file_a:
                 templates.update({auth: salt})
                 file_a.write(json.dumps(templates))
         except JSONDecodeError:
-            with open("password_salt.json", "w") as file_a:
+            with open("salt.json", "w") as file_a:
                 file_a.write(json.dumps({auth: salt}))
-
 
     def base_auth_server(self, sock_cli):
         while True:
@@ -90,25 +91,38 @@ class Server(metaclass=ServerVerifier):
             password = json.loads(sock_cli.recv(1024).decode("utf-8"))
             if user is None:
                 salt = self.random_char(8)
-                key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), salt.encode('utf-8'), 100000)
+                key = hashlib.pbkdf2_hmac(
+                    "sha256", password.encode("utf-8"), salt.encode("utf-8"), 100000
+                )
                 sock_cli.sendall(json.dumps(True, ensure_ascii=False).encode("utf-8"))
                 self.save_json(auth, salt)
                 info = json.loads(sock_cli.recv(1024).decode("utf-8"))
-                base_data = Storage(PATH, "users", {"login": auth, "password": key, "information": info})
+                base_data = Storage(
+                    PATH, "users", {"login": auth, "password": key, "information": info}
+                )
                 base_data.add_base()
                 base_data.metadata.clear()
             else:
                 sock_cli.sendall(json.dumps(False, ensure_ascii=False).encode("utf-8"))
-                with open("password_salt.json", "r") as file_a:
+                with open("salt.json", "r") as file_a:
                     file_content = file_a.read()
                     templates = json.loads(file_content)
-                key = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'), templates[auth].encode('utf-8'), 100000)
+                key = hashlib.pbkdf2_hmac(
+                    "sha256",
+                    password.encode("utf-8"),
+                    templates[auth].encode("utf-8"),
+                    100000,
+                )
             user = session.query(User).filter_by(login=auth).first()
             if key == user.password:
-                sock_cli.sendall(json.dumps("Вы авторизованы", ensure_ascii=False).encode("utf-8"))
+                sock_cli.sendall(
+                    json.dumps("Вы авторизованы", ensure_ascii=False).encode("utf-8")
+                )
                 break
             else:
-                sock_cli.sendall(json.dumps("Вы не авторизованы", ensure_ascii=False).encode("utf-8"))
+                sock_cli.sendall(
+                    json.dumps("Вы не авторизованы", ensure_ascii=False).encode("utf-8")
+                )
         self.base_history_client(sock_cli, user.id)
         return {user.login: user.id}
 
@@ -116,8 +130,11 @@ class Server(metaclass=ServerVerifier):
     def base_history_client(sock_cli, id_user):
         time = datetime.today().strftime("%Y.%m.%d %H:%M:%S")
         ip_date = sock_cli.getpeername()
-        base_data = Storage(PATH, "histories_users",
-                            {"id_user": int(id_user), "date": str(time), "ip_date": str(ip_date)})
+        base_data = Storage(
+            PATH,
+            "histories_users",
+            {"id_user": int(id_user), "date": str(time), "ip_date": str(ip_date)},
+        )
         base_data.metadata.clear()
         base_data.add_base()
 
@@ -135,7 +152,9 @@ class Server(metaclass=ServerVerifier):
                 id_send = self.id_user[key]
             elif str(value) == str(send_cli_r):
                 id_recv = self.id_user[key]
-        base_data = Storage(PATH, "contacts", {"id_send": int(id_send), "id_recv": int(id_recv)})
+        base_data = Storage(
+            PATH, "contacts", {"id_send": int(id_send), "id_recv": int(id_recv)}
+        )
         base_data.add_base()
 
     def base_contacts(self, sock_cli):
@@ -162,7 +181,11 @@ class Server(metaclass=ServerVerifier):
 
     def ser_send_p(self, sock_cli):
         """Отправка сообщений пользователям"""
-        sock_cli.sendall(json.dumps(str(f"Список клиентов: {self.client_all}"), ensure_ascii=False).encode("utf-8"))
+        sock_cli.sendall(
+            json.dumps(
+                str(f"Список клиентов: {self.client_all}"), ensure_ascii=False
+            ).encode("utf-8")
+        )
         data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
         dict_message = {}
         for k, v in self.client_all.items():
@@ -170,10 +193,15 @@ class Server(metaclass=ServerVerifier):
                 dict_message = {k: data_message[1]}
         try:
             self.client_all[data_message[0]].sendall(
-                json.dumps(dict_message, ensure_ascii=False).encode("utf-8"))
+                json.dumps(dict_message, ensure_ascii=False).encode("utf-8")
+            )
         except Exception as ex:
             sock_cli.sendall(
-                json.dumps(f"Сообщение испорчено, попробуйте отослать ещё раз! ", ensure_ascii=False).encode("utf-8"))
+                json.dumps(
+                    f"Сообщение испорчено, попробуйте отослать ещё раз! ",
+                    ensure_ascii=False,
+                ).encode("utf-8")
+            )
             log_send(ex)
         try:
             self.base_add_contacts(sock_cli, self.client_all[data_message[0]])
@@ -182,44 +210,83 @@ class Server(metaclass=ServerVerifier):
 
     def ser_send_g(self, sock_cli):
         """Отправка сообщений группе"""
-        sock_cli.sendall(json.dumps(str(f"Список групп: {self.base_group}"), ensure_ascii=False).encode("utf-8"))
+        sock_cli.sendall(
+            json.dumps(
+                str(f"Список групп: {self.base_group}"), ensure_ascii=False
+            ).encode("utf-8")
+        )
         data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
         if str(data_message[0].strip("#")).isdigit():
             if int(data_message[0].strip("#")) >= 100:
                 for sock_cl in self.base_group[data_message[0]]:
-                    sock_cl.sendall(json.dumps(str(data_message[1]), ensure_ascii=False).encode("utf-8"))
+                    sock_cl.sendall(
+                        json.dumps(str(data_message[1]), ensure_ascii=False).encode(
+                            "utf-8"
+                        )
+                    )
             else:
-                sock_cli.sendall(json.dumps("Вы ввели цифру меньше 100", ensure_ascii=False).encode("utf-8"))
+                sock_cli.sendall(
+                    json.dumps("Вы ввели цифру меньше 100", ensure_ascii=False).encode(
+                        "utf-8"
+                    )
+                )
         else:
             sock_cli.sendall(
-                json.dumps(f"Сообщение испорчено, попробуйте отослать ещё раз! ", ensure_ascii=False).encode("utf-8"))
+                json.dumps(
+                    f"Сообщение испорчено, попробуйте отослать ещё раз! ",
+                    ensure_ascii=False,
+                ).encode("utf-8")
+            )
 
     def ser_add_g(self, sock_cli):
         """Создание или добавление группы"""
-        sock_cli.sendall(json.dumps(str(f"Список групп: {self.base_group}"), ensure_ascii=False).encode("utf-8"))
+        sock_cli.sendall(
+            json.dumps(
+                str(f"Список групп: {self.base_group}"), ensure_ascii=False
+            ).encode("utf-8")
+        )
         data_message = json.loads(sock_cli.recv(1024).decode("utf-8"))
         if data_message in self.base_group:
             for k, v in self.base_group.items():
                 if k == data_message:
                     if sock_cli in v:
                         sock_cli.sendall(
-                            json.dumps("Вы уже создали или добавились в группу", ensure_ascii=False).encode("utf-8"))
+                            json.dumps(
+                                "Вы уже создали или добавились в группу",
+                                ensure_ascii=False,
+                            ).encode("utf-8")
+                        )
                         break
                     elif sock_cli not in v:
                         v.append(sock_cli)
                         self.base_group.update({data_message: v})
                         sock_cli.sendall(
-                            json.dumps("Вы успешно добавились в группу", ensure_ascii=False).encode("utf-8"))
+                            json.dumps(
+                                "Вы успешно добавились в группу", ensure_ascii=False
+                            ).encode("utf-8")
+                        )
                         break
         elif str(data_message.strip("#")).isdigit():
             if int(data_message.strip("#")) >= 100:
                 self.base_group.update({data_message: [sock_cli]})
-                sock_cli.sendall(json.dumps("Вы успешно создали группу", ensure_ascii=False).encode("utf-8"))
+                sock_cli.sendall(
+                    json.dumps("Вы успешно создали группу", ensure_ascii=False).encode(
+                        "utf-8"
+                    )
+                )
             else:
-                sock_cli.sendall(json.dumps("Вы ввели цифру меньше 100", ensure_ascii=False).encode("utf-8"))
+                sock_cli.sendall(
+                    json.dumps("Вы ввели цифру меньше 100", ensure_ascii=False).encode(
+                        "utf-8"
+                    )
+                )
         else:
-            sock_cli.sendall(json.dumps(f"Запрос на создание или удаление не удался, попробуйте ещё раз! ",
-                                        ensure_ascii=False).encode("utf-8"))
+            sock_cli.sendall(
+                json.dumps(
+                    f"Запрос на создание или удаление не удался, попробуйте ещё раз! ",
+                    ensure_ascii=False,
+                ).encode("utf-8")
+            )
 
     def ser_run(self, sock_cli):
         """Запуск внутреннего сценария сервера"""
@@ -230,7 +297,11 @@ class Server(metaclass=ServerVerifier):
                 data_message = "Z"
                 try:
                     sock_cli.sendall(
-                        json.dumps(f"Передача не состоялась, попробуйте ещё раз! ", ensure_ascii=False).encode("utf-8"))
+                        json.dumps(
+                            f"Передача не состоялась, попробуйте ещё раз! ",
+                            ensure_ascii=False,
+                        ).encode("utf-8")
+                    )
                 except BrokenPipeError:
                     return
             if data_message == "П":
@@ -241,12 +312,16 @@ class Server(metaclass=ServerVerifier):
                 self.ser_add_g(sock_cli)
             elif data_message == "К":
                 dict_contacts = self.base_contacts(sock_cli)
-                sock_cli.sendall(json.dumps(dict_contacts, ensure_ascii=False).encode("utf-8"))
+                sock_cli.sendall(
+                    json.dumps(dict_contacts, ensure_ascii=False).encode("utf-8")
+                )
             elif data_message == "А":
                 list_contact = []
                 for k in self.client_all.keys():
                     list_contact.append(k)
-                sock_cli.sendall(json.dumps(list_contact, ensure_ascii=False).encode("utf-8"))
+                sock_cli.sendall(
+                    json.dumps(list_contact, ensure_ascii=False).encode("utf-8")
+                )
 
     def server_original(self):
         """Запуск сервера"""
@@ -279,9 +354,9 @@ class Server(metaclass=ServerVerifier):
 
 def start_parser(ip="127.0.0.1", tcp=7777):
     """Сценарий для терминала"""
-    parser = argparse.ArgumentParser(description='Запуск сервера')
-    parser.add_argument("-a", type=str, help='Выбор ip')
-    parser.add_argument("-p", type=int, help='Выбор tcp')
+    parser = argparse.ArgumentParser(description="Запуск сервера")
+    parser.add_argument("-a", type=str, help="Выбор ip")
+    parser.add_argument("-p", type=int, help="Выбор tcp")
     args = parser.parse_args()
     if args.a and args.p is not None:
         a = Server(args.a, args.p)
@@ -297,5 +372,5 @@ def start_parser(ip="127.0.0.1", tcp=7777):
         a.server_original()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     start_parser()

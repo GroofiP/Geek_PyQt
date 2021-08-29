@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>service module &#8212; документация Messenger </title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/translations.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="storagesqlite module" href="storagesqlite.html" />
+    <link rel="prev" title="servercls module" href="servercls.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="module-service">
+<span id="service-module"></span><h1>service module<a class="headerlink" href="#module-service" title="Ссылка на этот заголовок">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="service.client_start_3">
+<span class="sig-prename descclassname"><span class="pre">service.</span></span><span class="sig-name descname"><span class="pre">client_start_3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#service.client_start_3" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция, для запуска множества клиентов на сервер</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Параметры:</dt><dd><p>ip_go (str): ip сервера к которому подключаемся.
+tcp (int): tcp сервера к которому подключаемся.
+n (int): n количество запущенных клиентов.</p>
+</dd>
+<dt>Возвращаемое значение:</dt><dd><p>None: Функция ничего не возвращает</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="service.info_log">
+<span class="sig-prename descclassname"><span class="pre">service.</span></span><span class="sig-name descname"><span class="pre">info_log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mod</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#service.info_log" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция для просмотра модуля отработки</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Параметры:</dt><dd><p>mod (str): модуль.</p>
+</dd>
+<dt>Возвращаемое значение:</dt><dd><p>None: Функция ничего не возвращает.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="service.log_send">
+<span class="sig-prename descclassname"><span class="pre">service.</span></span><span class="sig-name descname"><span class="pre">log_send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_mes</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#service.log_send" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Запись в log</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Параметры:</dt><dd><p>data_mes (str) : Сообщение которое будет передано в лог.</p>
+</dd>
+<dt>Возвращаемое значение:ничего не возвращает</dt><dd><p>None: Функция ничего не возвращает.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="service.login_required">
+<span class="sig-prename descclassname"><span class="pre">service.</span></span><span class="sig-name descname"><span class="pre">login_required</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#service.login_required" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция для запрета входа в определенные части функционала, только для определенных пользователей</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Параметры:</dt><dd><p>func: Функция которую мы будем ограждать от чужого входа.</p>
+</dd>
+<dt>Возвращаемое значение:</dt><dd><p>Function: Функция возвращает функцию.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="service.main">
+<span class="sig-prename descclassname"><span class="pre">service.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">func_ser_cli</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#service.main" title="Ссылка на это определение">¶</a></dt>
+<dd><p>Функция для просмотра функции модуля отработки</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Параметры:</dt><dd><p>func_ser_cli : Функция модуля которая стала аргументом в нашей функции .</p>
+</dd>
+<dt>Возвращаемое значение:</dt><dd><p>None: Функция ничего не возвращает.</p>
+</dd>
+</dl>
+</div></blockquote>
+</dd></dl>
+
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Messenger</a></h1>
+
+
+
+
+
+
+
+
+<h3>Навигация</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="main.html">Messenger(PyQt)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="main.html#id2">Описание побольше</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">PyQt</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="clientcls.html">clientcls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formclient.html">formclient module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="formserver.html">formserver module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="servercls.html">servercls module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">service module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="storagesqlite.html">storagesqlite module</a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  <li><a href="modules.html">PyQt</a><ul>
+      <li>Previous: <a href="servercls.html" title="предыдущая глава">servercls module</a></li>
+      <li>Next: <a href="storagesqlite.html" title="следующая глава">storagesqlite module</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Быстрый поиск</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Искать" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2021, Sobolev.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.1.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/service.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

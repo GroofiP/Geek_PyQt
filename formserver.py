@@ -11,13 +11,13 @@ from threading import Thread
 
 from PyQt5 import QtCore, QtWidgets
 
-from server_cls import Server
-from storage_sqlite import PATH, Storage, User, History_Message
+from servercls import Server
+from storagesqlite import PATH, Storage, User, History_Message
 
 
-class Ui_MainWindow(object):
-    def __init__(self, mainwindow):
-        self.centralwidget = QtWidgets.QWidget(mainwindow)
+class UiMainWindow(object):
+    def __init__(self, main_window):
+        self.centralwidget = QtWidgets.QWidget(main_window)
         self.gridLayout = QtWidgets.QGridLayout(self.centralwidget)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
@@ -34,10 +34,10 @@ class Ui_MainWindow(object):
         self.textBrowser = QtWidgets.QTextBrowser(self.centralwidget)
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
 
-    def setup_ui(self, mainwindow):
-        mainwindow.setObjectName("MainWindow")
-        mainwindow.resize(704, 565)
-        mainwindow.setStyleSheet("background-color : rgb(114, 159, 207)")
+    def setup_ui(self, main_window):
+        main_window.setObjectName("MainWindow")
+        main_window.resize(704, 565)
+        main_window.setStyleSheet("background-color : rgb(114, 159, 207)")
         self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
         self.gridLayout.setObjectName("gridLayout")
@@ -84,13 +84,13 @@ class Ui_MainWindow(object):
         self.textBrowser.setObjectName("textBrowser")
         self.verticalLayout_4.addWidget(self.textBrowser)
         self.gridLayout.addLayout(self.verticalLayout_4, 3, 0, 1, 2)
-        mainwindow.setCentralWidget(self.centralwidget)
+        main_window.setCentralWidget(self.centralwidget)
 
-        self.retranslate_ui(mainwindow)
+        self.retranslate_ui(main_window)
         self.pushButton_4.clicked.connect(self.server_click)
         self.pushButton.clicked.connect(self.server_list_contact)
         self.pushButton_2.clicked.connect(self.server_list_static)
-        QtCore.QMetaObject.connectSlotsByName(mainwindow)
+        QtCore.QMetaObject.connectSlotsByName(main_window)
 
     def server_click(self):
         a = self.lineEdit.text()
@@ -119,11 +119,17 @@ class Ui_MainWindow(object):
         base_data = Storage(PATH, "history_message")
         base_data.con_base()
         session = base_data.session_con()
-        id_users = session.query(History_Message).group_by(History_Message.id_send).all()
+        id_users = (
+            session.query(History_Message).group_by(History_Message.id_send).all()
+        )
         dict_static = {}
         for item in id_users:
-            user_messages = session.query(History_Message).filter_by(id_send=item.id_send).count()
-            dict_static.update({f"Пользователь: {item.id_send}": f"Сообщений: {user_messages}"})
+            user_messages = (
+                session.query(History_Message).filter_by(id_send=item.id_send).count()
+            )
+            dict_static.update(
+                {f"Пользователь: {item.id_send}": f"Сообщений: {user_messages}"}
+            )
         self.textBrowser.setText(str(dict_static))
 
     def retranslate_ui(self, mainwindow):
@@ -132,14 +138,16 @@ class Ui_MainWindow(object):
         self.label_2.setText(_translate("MainWindow", "TCP"))
         self.label.setText(_translate("MainWindow", "IP"))
         self.pushButton_4.setText(_translate("MainWindow", "Подключение к базе"))
-        self.pushButton.setText(_translate("MainWindow", "Отобразить список всех клиентов"))
+        self.pushButton.setText(
+            _translate("MainWindow", "Отобразить список всех клиентов")
+        )
         self.pushButton_2.setText(_translate("MainWindow", "Статистика клиентов"))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     window = QtWidgets.QMainWindow()
-    ui = Ui_MainWindow(window)
+    ui = UiMainWindow(window)
     ui.setup_ui(window)
 
     window.show()
